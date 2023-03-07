@@ -8,10 +8,7 @@
         <link rel="stylesheet" href="/Css/style.css" />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-            integrity="sha512-4glidzLFZQmU5/N5U6SfpC8FFPivPM2V7uzBycwyiFV7krXpWlL1gyOu53/zMCrA7PJ+TtT0vHhXXp0Dg1t8tw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         />
         <link
             rel="shortcut icon"
@@ -37,34 +34,62 @@
     <body>
         <header id="header_block">
             <div class="content">
-                <div class="header_block-list">
+                <div class="header_body">
                     <div id="logo_header">
-                        <img src="/img/Logo img.png" alt="Sofia Salon" />
+                        <a href="#" rel=""
+                            ><img
+                                src="/img/logo img color.png"
+                                alt="Sofia Salon"
+                        /></a>
                     </div>
                     <nav id="nav_block">
                         <ul class="nav_block-list">
                             <li class="nav-item">
-                                <input type="button" value="Search" />
+                                <form action="">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input
+                                        type="text"
+                                        style="
+                                            width: 80px;
+                                            border: none;
+                                            border-radius: 8px;
+                                            box-shadow: 0 0 4px
+                                                rgba(0, 0, 0, 0.5);
+                                            background-color: #f1f7fa;
+                                        "
+                                        placeholder="Search style"
+                                    />
+                                </form>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Gallery</a>
+                                <a href="#">Hair Style</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#">About Us </a>
+                                <a href="#">Days Of BreakNews </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Blog</a>
+                                <a href="#">Salon Discounts</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#">Book Online</a>
+                                <a href="#">Contact Us</a>
                             </li>
                         </ul>
                     </nav>
+                    <div class="header_register">
+                        <div class="btn">
+                            <a href="">Sign In</a>
+                        </div>
+
+                        <div class="btn btn-fix">
+                            <a href="">Sign Up</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
-        <div>
+        <div id="hero_block">
             <img src="/img/Hero_Img_Landing_Page_fixed-removebg.png" alt="" />
         </div>
+        <script src="./Javascript/"></script>
     </body>
 </html>

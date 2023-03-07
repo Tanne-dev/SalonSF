@@ -7,20 +7,34 @@ html {
 }
 :root {
     --primary-font: "Raleway", sans-serif;
+    --primary-color: linear-gradient(to right, #e2caa2, #c5af86, #6a593d);
 }
 /* Common */
-
+.btn {
+    padding: 10px;
+    font-weight: 400;
+}
 body {
     font-size: 1.6rem;
-
-    object-fit: cover;
-    background-repeat: no-repeat;
     background-image: linear-gradient(to right, #e2caa2, #c5af86, #6a593d);
+    font-family: var(--primary-font);
 }
 #header_block {
-    height: 100px;
+    position: relative;
+    height: 80px;
     display: flex;
     align-items: center;
+    background-color: var(----primary-color);
+    border-bottom: solid 1px #efdec3;
+}
+#header_block a {
+    color: #eee5d6;
+    transition: color 0.4s ease-out;
+}
+#header_block a:hover {
+    color: white;
+    background-color: #efdec339;
+    border-radius: 10px;
 }
 .content {
     width: 1170px;
@@ -28,30 +42,51 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-.header_block-list {
+.header_body {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 #nav_block {
-    margin-top: -25px;
+    position: fixed;
+    right: 20%;
 }
 .nav_block-list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.nav_block-list .nav-item:last-child {
-    border: solid 1px black;
-    background-color: aqua;
-}
+
 .nav-item {
     font-family: var(--primary-font);
     padding: 5px;
-    margin-right: 30px;
-    font-size: 1.45rem;
+    font-size: 1.4rem;
+}
+.nav-item a {
+    padding: 20px;
+    transition: color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 }
 #logo_header img {
+    position: fixed;
     object-fit: cover;
-    height: 80px;
-    width: 200px;
+    width: 250px;
+    top: -12%;
+    left: 5%;
+}
+.header_register {
+    position: fixed;
+    display: flex;
+    top: 2.5%;
+    left: 85%;
+}
+.btn-fix {
+    border-radius: 10px;
+    background-color: #efdec352;
+}
+#hero_block img {
+    position: fixed;
+    height: 90vh;
+    width: 60%;
+    left: 35%;
 }
