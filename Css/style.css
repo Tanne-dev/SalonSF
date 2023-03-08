@@ -7,16 +7,16 @@ html {
 }
 :root {
     --primary-font: "Raleway", sans-serif;
-    --primary-color: linear-gradient(to right, #e2caa2, #c5af86, #6a593d);
+    --primary-gradient: linear-gradient(to right, #e2caa2, #c5af86, #6a593d);
 }
 /* Common */
 .btn {
     padding: 10px;
     font-weight: 400;
+    border-radius: 10px;
 }
 body {
     font-size: 1.6rem;
-    background-image: linear-gradient(to right, #e2caa2, #c5af86, #6a593d);
     font-family: var(--primary-font);
 }
 #header_block {
@@ -24,15 +24,14 @@ body {
     height: 80px;
     display: flex;
     align-items: center;
-    background-color: var(----primary-color);
+    background-image: var(--primary-gradient);
     border-bottom: solid 1px #efdec3;
 }
 #header_block a {
     color: #eee5d6;
     transition: color 0.4s ease-out;
 }
-#header_block a:hover {
-    color: white;
+.nav_block-list .nav-item:hover {
     background-color: #efdec339;
     border-radius: 10px;
 }
@@ -56,14 +55,36 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 .nav-item {
     font-family: var(--primary-font);
-    padding: 5px;
+    padding: 30px;
     font-size: 1.4rem;
+    position: relative;
 }
-.nav-item a {
-    padding: 20px;
+.nav-item:hover .nav-sub-list {
+    display: block;
+}
+.nav-sub-list {
+    background-color: #2a577dbe;
+    position: absolute;
+    width: 120px;
+    top: 78px;
+    display: none;
+}
+.nav-sub-item:hover {
+    background-color: #f1e4cd73;
+}
+.nav-sub-item {
+    border-bottom: 1px solid #efdec3;
+}
+.nav-sub-list a {
+    display: block;
+    padding: 10px;
+    color: black;
+}
+#nav_block .nav-item {
+    padding: 32px;
+    border-radius: 10px;
     transition: color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
 }
@@ -80,13 +101,19 @@ body {
     top: 2.5%;
     left: 85%;
 }
+.header_register .btn:hover {
+    box-shadow: 3px 3px 7px -2px rgba(0, 0, 0, 0.75);
+}
 .btn-fix {
     border-radius: 10px;
     background-color: #efdec352;
+    margin-left: 5px;
 }
+#hero_block {
+    background: var(--primary-gradient);
+}
+
 #hero_block img {
-    position: fixed;
+    object-fit: cover;
     height: 90vh;
-    width: 60%;
-    left: 35%;
 }

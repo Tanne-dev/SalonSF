@@ -1,21 +1,23 @@
-const links = document.querySelectorAll("a");
+let navItems = document.querySelectorAll(".nav-item");
+navItems.forEach(function (navItem) {
+    let navTitle = navItem.querySelector(".nav-title");
 
-links.forEach((link) => {
-    link.addEventListener("mouseover", function () {
-        let count = 0;
-        const timer = setInterval(function () {
-            if (count < 100) {
-                count += 1;
-                link.style.backgroundColor = `rgba(0, 0, 255, ${
-                    count / 100
-                })`; /* chuyển màu dần */
-            } else {
-                clearInterval(timer);
-            }
-        }, 10);
+    navItem.addEventListener("mouseover", function () {
+        navTitle.style.color = "#fff";
+    });
+    navItem.addEventListener("mouseleave", function () {
+        navTitle.style.color = "#eee5d6";
+    });
+});
+let subList = document.querySelector(".nav-sub-list");
+let subItems = subList.querySelectorAll(".nav-sub-item");
+
+subItems.forEach(function (subItem) {
+    subItem.addEventListener("mouseover", function () {
+        subItem.style.backgroundColor = "white";
     });
 
-    link.addEventListener("mouseout", function () {
-        link.style.backgroundColor = "#f00"; /* màu nền ban đầu */
+    subItem.addEventListener("mouseleave", function () {
+        subItem.style.backgroundColor = "#2a577dbe";
     });
 });
