@@ -10,6 +10,17 @@ html {
     --primary-gradient: linear-gradient(to right, #e2caa2, #c5af86, #6a593d);
 }
 /* Common */
+#login-page {
+    width: 30%;
+    height: 70vh;
+    position: absolute;
+    background: rgba(224, 224, 153, 0.427);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    backdrop-filter: blur(8px);
+}
+
 .btn {
     padding: 10px;
     font-weight: 400;
@@ -18,6 +29,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: var(--primary-font);
+    text-transform: capitalize;
 }
 #header_block {
     position: relative;
@@ -35,6 +47,7 @@ body {
     background-color: #efdec339;
     border-radius: 10px;
 }
+
 .content {
     width: 1170px;
     max-width: calc(100%-48px);
@@ -57,37 +70,46 @@ body {
 }
 .nav-item {
     font-family: var(--primary-font);
-    padding: 30px;
+    padding: 32px;
     font-size: 1.4rem;
     position: relative;
+    border-radius: 10px;
+    transition: color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 }
-.nav-item:hover .nav-sub-list {
-    display: block;
-}
+
 .nav-sub-list {
     background-color: #2a577dbe;
     position: absolute;
     width: 120px;
     top: 78px;
+    border-top: none;
+    border-radius: 10px;
     display: none;
 }
+.nav-sub-list::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 14%;
+    transform: translateX(-50%);
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #2a577dbe transparent;
+}
+
 .nav-sub-item:hover {
-    background-color: #f1e4cd73;
+    background-color: #f1e4cd1f;
 }
 .nav-sub-item {
-    border-bottom: 1px solid #efdec3;
+    border-bottom: 1px solid #efdec32e;
 }
 .nav-sub-list a {
     display: block;
     padding: 10px;
     color: black;
 }
-#nav_block .nav-item {
-    padding: 30px;
-    border-radius: 10px;
-    transition: color 0.5s ease-in-out;
-    transition: background-color 0.5s ease-in-out;
-}
+
 #logo_header img {
     position: fixed;
     object-fit: cover;

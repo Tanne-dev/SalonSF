@@ -1,3 +1,4 @@
+// Change the color of nav-item when u mouseover
 let navItems = document.querySelectorAll(".nav-item");
 navItems.forEach(function (navItem) {
     let navTitle = navItem.querySelector(".nav-title");
@@ -9,15 +10,14 @@ navItems.forEach(function (navItem) {
         navTitle.style.color = "#eee5d6";
     });
 });
-let subList = document.querySelector(".nav-sub-list");
-let subItems = subList.querySelectorAll(".nav-sub-item");
-
-subItems.forEach(function (subItem) {
-    subItem.addEventListener("mouseover", function () {
-        subItem.style.backgroundColor = "white";
+// Show the sub-menu and change the color when mouseover
+for (let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener("mouseover", function () {
+        let subElement = this.querySelector(".nav-sub-list");
+        subElement.style.display = "block";
     });
-
-    subItem.addEventListener("mouseleave", function () {
-        subItem.style.backgroundColor = "#2a577dbe";
+    navItems[i].addEventListener("mouseleave", function () {
+        let subElement = this.querySelector(".nav-sub-list");
+        subElement.style.display = "none";
     });
-});
+}
