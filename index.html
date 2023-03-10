@@ -32,6 +32,7 @@
         <title>SF Studio Salon</title>
     </head>
     <body>
+        <!-- -----Header Block------>
         <header id="header_block">
             <div class="content">
                 <div class="header_body">
@@ -147,18 +148,35 @@
                 </div>
             </div>
         </header>
+        <!-- -----Login Page----  -->
         <div id="login-page">
-            <form action="">
+            <form id="form-login" action="">
                 <div class="head_login-page">
-                    <img src="" alt="" />
+                    <img src="./img/Logo Login page.png" alt="Logo Salon" />
                     <a href=""> No Account? SignUp</a>
                 </div>
                 <div class="body_login-page">
-                    <h2>Sign Up</h2>
+                    <h2 class="body-login-title">Sign In</h2>
                     <div class="login-other-service">
-                        <div class="btn login-gg"></div>
-                        <div class="btn login-fb"></div>
-                        <div class="btn login-inst"></div>
+                        <div
+                            class="btn login-gg"
+                            style="
+                                background-color: #0339fd;
+                                margin-right: 10px;
+                            "
+                        >
+                            <i
+                                class="fa-brands fa-google"
+                                style="margin-right: 10px"
+                            ></i
+                            >Sign In with Google
+                        </div>
+                        <div class="login-inst">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="login-fb">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
                     </div>
                     <div class="check-name">
                         <label for="">Username or Email Address</label>
@@ -169,16 +187,22 @@
                         <input type="text" placeholder="Please write here..." />
                     </div>
                     <div class="check-box">
-                        <input type="checkbox" name="" id="" />
+                        <input
+                            type="checkbox"
+                            name=""
+                            id=""
+                            style="width: inherit"
+                        />
                         <label for="">Remember me?</label>
                     </div>
                     <div class="login-cta">
-                        <button class="btn"><a href=""></a></button>
+                        <button class="btn"><a href=""> Sign In</a></button>
                         <a href=""> Forgot Password?</a>
                     </div>
                 </div>
             </form>
         </div>
+        <!-- -----Hero Block------>
         <div id="hero_block">
             <div class="content">
                 <img src="img/Hero img.png" alt="" />

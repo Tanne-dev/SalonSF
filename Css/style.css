@@ -9,20 +9,10 @@ html {
     --primary-font: "Raleway", sans-serif;
     --primary-gradient: linear-gradient(to right, #e2caa2, #c5af86, #6a593d);
 }
-/* Common */
-#login-page {
-    width: 30%;
-    height: 70vh;
-    position: absolute;
-    background: rgba(224, 224, 153, 0.427);
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    backdrop-filter: blur(8px);
-}
 
+/* Common */
 .btn {
-    padding: 10px;
+    padding: 15px 25px;
     font-weight: 400;
     border-radius: 10px;
 }
@@ -31,6 +21,91 @@ body {
     font-family: var(--primary-font);
     text-transform: capitalize;
 }
+/*-----Login Page---- */
+#login-page {
+    width: 30%;
+    height: 80vh;
+    position: absolute;
+    background: #d798986b;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 52%;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+}
+#form-login {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.head_login-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head_login-page img {
+    filter: brightness(4);
+    object-fit: cover;
+    width: 60%;
+    height: 7em;
+}
+.head_login-page a {
+    width: 25%;
+    margin-top: -2em;
+    color: #ffffd4;
+    font-size: 1.3rem;
+}
+.body_login-page {
+    margin-top: 15px;
+}
+.body-login-title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #ffffd4;
+    width: 34%;
+    margin: auto;
+}
+.login-other-service {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+.login-gg {
+    color: #ffffff;
+}
+.login-inst,
+.login-fb {
+    background-color: #b3f6f8;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+.login-fb {
+    margin-left: 5px;
+}
+.check-name,
+.check-pass {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.check-box {
+    margin-top: 10px;
+    display: flex;
+}
+.check-name,
+.check-pass,
+input {
+    width: 100%;
+}
+.check-name,
+.check-pass,
+.check-box label {
+    font-size: 1.5rem;
+    color: #ffffd4;
+}
+/*-----Header Block---- */
 #header_block {
     position: relative;
     height: 80px;
@@ -131,6 +206,7 @@ body {
     background-color: #efdec352;
     margin-left: 5px;
 }
+/*-----Hero Block---- */
 #hero_block {
     background: var(--primary-gradient);
 }
