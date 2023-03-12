@@ -137,56 +137,86 @@
                         </ul>
                     </nav>
                     <div class="header_register">
-                        <div class="btn">
-                            <a class="btn-title" href="">Sign In</a>
-                        </div>
+                        <div class="btn btn-login">Sign In</div>
 
-                        <div class="btn btn-fix">
-                            <a class="btn-title" href="">Sign Up</a>
-                        </div>
+                        <div class="btn btn-register">Sign Up</div>
                     </div>
                 </div>
             </div>
         </header>
+
         <!-- -----Login Page----  -->
         <div id="login-page">
+            <div class="btn-exit row">
+                <i class="fa-light fa-x"></i>
+            </div>
+            <div class="head_login-page row">
+                <img src="./img/Logo Login page.png" alt="Logo Salon" />
+                <a href=""> No Account? SignUp</a>
+            </div>
             <form id="form-login" action="">
-                <div class="head_login-page">
-                    <img src="./img/Logo Login page.png" alt="Logo Salon" />
-                    <a href=""> No Account? SignUp</a>
-                </div>
                 <div class="body_login-page">
-                    <h2 class="body-login-title">Sign In</h2>
+                    <h2 class="body-login-title" style="margin: auto 23%">
+                        Welcome Back
+                    </h2>
                     <div class="login-other-service">
-                        <div
-                            class="btn login-gg"
-                            style="
-                                background-color: #0339fd;
-                                margin-right: 10px;
-                            "
-                        >
-                            <i
-                                class="fa-brands fa-google"
-                                style="margin-right: 10px"
-                            ></i
-                            >Sign In with Google
+                        <div class="btn login-gg row">
+                            <a
+                                href="https://accounts.google.com/"
+                                style="color: #ffffff"
+                            >
+                                <i
+                                    class="fa-brands fa-google"
+                                    style="margin-right: 10px"
+                                ></i
+                                >Sign In with Google
+                            </a>
                         </div>
-                        <div class="login-inst">
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                        <div class="login-fb">
-                            <i class="fa-brands fa-facebook"></i>
+
+                        <div class="login-social-media row">
+                            <div class="login-inst">
+                                <a href="#"
+                                    ><i
+                                        class="fa-brands fa-instagram"
+                                        style="
+                                            background-image: linear-gradient(
+                                                199deg,
+                                                #4158d0 0%,
+                                                #c850c0 46%,
+                                                #ffcc70 100%
+                                            );
+                                            color: white;
+                                            margin: -3px;
+                                        "
+                                    ></i
+                                ></a>
+                            </div>
+                            <div class="login-fb" style="padding-left: 10px">
+                                <a href="#"
+                                    ><i
+                                        class="fa-brands fa-facebook-f"
+                                        style="
+                                            background-color: blue;
+                                            color: white;
+                                            width: 37px;
+                                        "
+                                    ></i
+                                ></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="check-name">
+                    <div class="check-name row">
                         <label for="">Username or Email Address</label>
                         <input type="text" placeholder="Please write here..." />
                     </div>
-                    <div class="check-pass">
+                    <div class="check-pass row">
                         <label for="">Password</label>
-                        <input type="text" placeholder="Please write here..." />
+                        <input
+                            type="password"
+                            placeholder="Please write here..."
+                        />
                     </div>
-                    <div class="check-box">
+                    <div class="check-box row">
                         <input
                             type="checkbox"
                             name=""
@@ -195,9 +225,72 @@
                         />
                         <label for="">Remember me?</label>
                     </div>
-                    <div class="login-cta">
-                        <button class="btn"><a href=""> Sign In</a></button>
-                        <a href=""> Forgot Password?</a>
+                    <div class="login-cta row">
+                        <a
+                            href=""
+                            style="color: rgb(3, 57, 253); font-size: 1.5rem"
+                        >
+                            <i class="fa-regular fa-face-smile"></i> Forgot
+                            Password?</a
+                        >
+                        <button class="btn btn-fix">
+                            <a href=""> Sign In</a>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- ---- Sign Up Page----- -->
+        <div id="sign-up-Page">
+            <div class="btn-exit row">
+                <i class="fa-light fa-x"></i>
+            </div>
+            <div class="head_login-page row">
+                <img src="./img/Logo Login page.png" alt="Logo Salon" />
+                <a href="">
+                    <i
+                        class="fa-solid fa-arrow-right"
+                        style="
+                            position: fixed;
+                            top: 5%;
+                            right: 5%;
+                            font-size: 15px;
+                            color: #0e0d0dc5; ;
+                        "
+                    ></i
+                ></a>
+            </div>
+            <form id="form-login" action="">
+                <div class="body_login-page">
+                    <h2 class="body-login-title" style="margin: auto 24%">
+                        Join Us Today
+                    </h2>
+                    <p class="sign-up-desc" style="margin: 4% 5%">
+                        Become a member by entering your details below.
+                    </p>
+                    <div class="check-name row">
+                        <label for="">Enter your ID</label>
+                        <input type="text" placeholder="Please write here..." />
+                    </div>
+                    <div class="check-pass row">
+                        <label for="">Password</label>
+                        <input
+                            type="password"
+                            placeholder="Please write here..."
+                        />
+                    </div>
+                    <div class="check-pass row">
+                        <label for="">Password Confirmation</label>
+                        <input
+                            type="password"
+                            placeholder="Please write here..."
+                        />
+                    </div>
+
+                    <div class="login-cta row">
+                        <button class="btn btn-sign-up">
+                            <a href="" style="font-size: 15px"> Sign Up</a>
+                        </button>
                     </div>
                 </div>
             </form>
@@ -205,7 +298,67 @@
         <!-- -----Hero Block------>
         <div id="hero_block">
             <div class="content">
-                <img src="img/Hero img.png" alt="" />
+                <div class="hero-body">
+                    <h1 class="hero-main-title">
+                        Discover Your Perfect
+                        <span
+                            class="last-char"
+                            style="color: #ffcc70; font-style: italic"
+                            >Look</span
+                        >
+                    </h1>
+                    <div class="hero_information row">
+                        <div class="hero-title">
+                            <p class="hero-desc">
+                                Unleash your style potential and discover your
+                                perfect look with our personalized consultation.
+                                Our team of experts will help you enhance your
+                                natural beauty. Book now for a transformational
+                                experience.
+                            </p>
+                            <div class="hero-cta">
+                                <button class="btn btn-fix">Booking Now</button>
+                                <button class="btn btn-fix">About Me</button>
+                            </div>
+                        </div>
+                        <div class="hero-social-media ">
+                            <img src="img/Hero img.png" alt="Blonde girl" />
+                            <div class="link-social-media row">
+                                <div
+                                    class="login-fb"
+                                    style="padding-left: 10px"
+                                >
+                                    <a href="#"
+                                        ><i
+                                            class="fa-brands fa-facebook-f"
+                                            style="
+                                                background-color: blue;
+                                                color: white;
+                                                width: 37px;
+                                            "
+                                        ></i
+                                    ></a>
+                                </div>
+                                <div class="login-inst">
+                                    <a href="#"
+                                        ><i
+                                            class="fa-brands fa-instagram"
+                                            style="
+                                                background-image: linear-gradient(
+                                                    199deg,
+                                                    #4158d0 0%,
+                                                    #c850c0 46%,
+                                                    #ffcc70 100%
+                                                );
+                                                color: white;
+                                                margin: -3px;
+                                            "
+                                        ></i
+                                    ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="./Javascript/database.js"></script>
