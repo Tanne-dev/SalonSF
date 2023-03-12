@@ -212,17 +212,17 @@ input:focus {
     font-size: 1.5rem;
     position: relative;
     border-radius: 10px;
-    transition: color 0.5s ease-in-out;
-    transition: background-color 0.5s ease-in-out;
+    transition: color 125ms ease-in-out;
 }
 
 .nav-sub-list {
-    background-color: #2a577dbe;
+    background-color: #2875c8;
     position: absolute;
     width: 120px;
-    top: 78px;
+    top: 68px;
     border-top: none;
     border-radius: 10px;
+    z-index: 2;
     display: none;
 }
 
@@ -282,6 +282,13 @@ input:focus {
     top: 20%;
     right: 20%;
 }
+.hero-cta {
+    margin-top: 30px;
+}
+.hero-btn {
+    border: solid 1px black;
+    background-color: #5a6473;
+}
 .link-social-media {
     position: absolute;
     top: 92%;
@@ -293,12 +300,7 @@ input:focus {
     font-weight: 500;
     font-size: 6.2rem;
     line-height: 1.19;
-    background-clip: linear-gradient(
-        255deg,
-        #4158d0 0%,
-        #c850c0 46%,
-        #ffcc70 100%
-    );
+    color: #3d1e02;
 }
 .hero-title {
     width: 50%;

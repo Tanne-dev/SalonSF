@@ -38,7 +38,7 @@ let regBTN = document.querySelector(".btn-register");
 regBTN.addEventListener("click", function () {
     let regElement = document.querySelector("#sign-up-Page");
     regElement.style.right = "20%";
-    regElement.style.display = "block";
+    regElement.style.display = "block ";
 });
 let btnExitreg = document.querySelector("#sign-up-Page .btn-exit");
 btnExitreg.addEventListener("click", function () {
