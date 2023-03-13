@@ -15,6 +15,13 @@
             href="./img/Favicon/favicon-32x32.png"
             type="image/x-icon"
         />
+        <!-- font Playfair Display -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
+            rel="stylesheet"
+        />
         <!-- Font Raleway -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -241,7 +248,7 @@
             </form>
         </div>
         <!-- ---- Sign Up Page----- -->
-        <div id="sign-up-Page">
+        <div id="sign-up-Page" style="display: none">
             <div class="btn-exit row">
                 <i class="fa-light fa-x"></i>
             </div>
@@ -299,11 +306,7 @@
         <div id="hero_block">
             <div class="content">
                 <div class="hero-body">
-                    <h1 class="hero-main-title">
-                        Discover Your Perfect
-                        Look
-                        
-                    </h1>
+                    <h1 class="hero-main-title">Discover Your Perfect Look</h1>
                     <div class="hero_information row">
                         <div class="hero-title">
                             <p class="hero-desc">
@@ -314,13 +317,18 @@
                                 experience.
                             </p>
                             <div class="hero-cta">
-                                <a href="" class="btn hero-btn">Booking Now</a>
-                                <a href="" class="btn hero-btn">About Me</a>
+                                <a href="" class="hero-booking">Booking Now</a>
+                                <a
+                                    href=""
+                                    class="hero-cta-btn"
+                                    style="margin-left: 20px"
+                                    >About Me</a
+                                >
                             </div>
                         </div>
-                        <div class="hero-social-media ">
+                        <div class="hero-social-media">
                             <img src="img/Hero img.png" alt="Blonde girl" />
-                            <div class="link-social-media row">
+                            <div class="link-social-media">
                                 <div
                                     class="login-fb"
                                     style="padding-left: 10px"
@@ -348,16 +356,34 @@
                                                     #ffcc70 100%
                                                 );
                                                 color: white;
-                                                margin: -3px;
+                                                margin-left: 10px;
                                             "
                                         ></i
                                     ></a>
+                                </div>
+                                <div class="google-map">
+                                    <a
+                                        href="https://www.google.com/maps/place/Engelbrektsgatan+13,+211+33+Malm%C3%B6/@55.6042302,12.9956015,17z/data=!3m1!4b1!4m6!3m5!1s0x4653a3fde28d5f27:0xbdb75a534af9714e!8m2!3d55.6042272!4d12.9977955!16s%2Fg%2F11c43v6001"
+                                    >
+                                        <i
+                                            class="fa-solid fa-location-dot"
+                                            style="
+                                                color: white;
+                                                width: 37px;
+                                                margin-left: 10px;
+                                            "
+                                        ></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Features  -->
+        <div id="features_block"></div>
+
         <script src="./Javascript/database.js"></script>
     </body>
 </html>

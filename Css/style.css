@@ -4,9 +4,11 @@
 }
 html {
     font-size: 62.5%;
-    height: 2000px;
+    height: 5000px;
+    background-image: var(--primary-gradient);
 }
 :root {
+    --primary-h1: "Playfair Display", serif;
     --primary-font: "Raleway", sans-serif;
     --primary-gradient: linear-gradient(
         to right,
@@ -23,12 +25,13 @@ html {
     align-items: center;
 }
 .btn {
-    padding: 15px 25px;
+    padding: 15px 20px;
     font-weight: 400;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     color: white;
+    transition: all 125ms ease;
 }
 body {
     font-size: 1.6rem;
@@ -108,8 +111,10 @@ body {
 .login-social-media {
     margin: 10px auto;
 }
+
 .login-inst i,
-.login-fb i {
+.login-fb i,
+.google-map i {
     font-size: 20px;
     border-radius: 10px;
     padding: 10px;
@@ -155,7 +160,6 @@ input:focus {
 }
 .btn-sign-up,
 .btn-fix {
-    background-image: var(--primary-gradient);
     color: black;
 }
 .btn-sign-up a,
@@ -175,12 +179,13 @@ input:focus {
 
 /*-----Header Block---- */
 #header_block {
-    position: relative;
+    position: sticky;
     height: 80px;
     display: flex;
     align-items: center;
     background-image: var(--primary-gradient);
     border-bottom: solid 1px #efdec3;
+    z-index: 2;
 }
 #header_block a {
     color: #eee5d6;
@@ -212,14 +217,17 @@ input:focus {
     font-size: 1.5rem;
     position: relative;
     border-radius: 10px;
-    transition: color 125ms ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
-
+.nav-item:hover {
+    font-size: 1.6rem;
+    color: white;
+}
 .nav-sub-list {
     background-color: #2875c8;
     position: absolute;
     width: 120px;
-    top: 68px;
+    top: 55px;
     border-top: none;
     border-radius: 10px;
     z-index: 2;
@@ -240,7 +248,7 @@ input:focus {
 
 #logo_header img {
     object-fit: cover;
-    height: 65px;
+    height: 70px;
     width: 250px;
     top: -12%;
     left: 5%;
@@ -249,21 +257,24 @@ input:focus {
     display: flex;
     top: 2.5%;
     left: 85%;
+    transition: all 125ms ease;
 }
 .header_register .btn:hover {
     box-shadow: 3px 3px 7px -2px rgba(0, 0, 0, 0.75);
+    padding: 15px 30px;
 }
 .btn-register {
     margin-left: 5px;
     background-color: #e3d1b185;
 }
 /*-----Hero Block---- */
+/*-----Hero Block---- */
 #hero_block {
-    background: var(--primary-gradient);
     position: relative;
     height: calc(100vh - 90px);
 }
 .hero-body {
+    padding-top: 50px;
     justify-content: space-between;
 }
 .hero-title {
@@ -278,24 +289,23 @@ input:focus {
 #hero_block img {
     position: absolute;
     object-fit: cover;
-    height: 70vh;
-    top: 20%;
-    right: 20%;
+    height: 89vh;
+    top: 0%;
+    right: 2%;
 }
+
 .hero-cta {
-    margin-top: 30px;
+    margin-top: 50px;
 }
-.hero-btn {
-    border: solid 1px black;
-    background-color: #5a6473;
-}
+
 .link-social-media {
-    position: absolute;
-    top: 92%;
-    right: 15%;
+    position: fixed;
+    top: 50%;
+    right: 2%;
     width: 50px;
 }
 .hero-main-title {
+    font-family: var(--primary-h1);
     padding-top: 30px;
     font-weight: 500;
     font-size: 6.2rem;
@@ -313,3 +323,45 @@ input:focus {
     line-height: 1.78;
     color: #5a6473;
 }
+.hero-btn:focus {
+    background: white;
+}
+.hero-booking,
+.hero-cta-btn {
+    padding: 20px 30px;
+    background-color: #ffb900;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    line-height: 26px;
+    transition: all 0.5s ease-out;
+}
+.hero-booking:hover {
+    background-image: linear-gradient(
+        43deg,
+        #4158d0 0%,
+        #c850c0 46%,
+        #ffcc70 100%
+    );
+
+    font-size: 2rem;
+}
+.hero-cta-btn:hover {
+    background-image: linear-gradient(
+        90deg,
+        #ff9a8b 0%,
+        #ff6a88 55%,
+        #ff99ac 100%
+    );
+
+    font-size: 2rem;
+}
+.hero-social-media {
+    display: flex;
+    flex-direction: column;
+}
+/* Features block  */
+/* #features_block {
+    background-image: var(--primary-gradient);
+    height: 500px;
+} */

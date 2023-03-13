@@ -46,3 +46,4 @@ btnExitreg.addEventListener("click", function () {
     regElement.style.right = "-100%";
     regElement.style.display = "none";
 });
+//
