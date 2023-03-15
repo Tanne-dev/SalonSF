@@ -55,6 +55,7 @@
                                 <form action="">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                     <input
+                                        class="nav-search"
                                         type="text"
                                         style="
                                             width: 80px;
@@ -144,10 +145,10 @@
                     </nav>
                     <div class="header_register">
                         <div class="btn btn-login" style="color: #f7f7f7">
-                            Sign In
+                            <a href="#!">Sign In</a>
                         </div>
                         <div class="btn btn-register" style="color: #f7f7f7">
-                            Sign Up
+                            <a href="#!">Sign Up</a>
                         </div>
                     </div>
                 </div>
@@ -250,7 +251,7 @@
             </form>
         </div>
         <!-- ---- Sign Up Page----- -->
-        <div id="sign-up-Page" style="display: none">
+        <div id="sign-up-Page">
             <div class="btn-exit row">
                 <i class="fa-light fa-x"></i>
             </div>
@@ -319,7 +320,7 @@
                                 experience.
                             </p>
                             <div class="hero-cta">
-                                <a href="" class="hero-booking">Booking Now</a>
+                                <a href="" class="booking">Booking Now</a>
                                 <a
                                     href=""
                                     class="hero-cta-btn"
@@ -391,7 +392,10 @@
                         <h2 class="head_popular-subtitle">
                             <a href="#Popular_block">Our popular Hair Style</a>
                         </h2>
-                        <p class="head_popular-desc">
+                        <p
+                            class="head_popular-desc line-clamp"
+                            style="-webkit-line-clamp: 4"
+                        >
                             "Looking for inspiration for your next haircut or
                             color change? Check out our guide to Our Popular
                             Hair Styles! We've rounded up the most sought-after
@@ -408,21 +412,21 @@
                         </div>
                     </div>
                 </div>
-                <!-- Course  -->
-                <div class="block-list">
+                <!-- Hair style Block  -->
+                <div class="hair-list">
                     <!-- Course 1 -->
-                    <div class="block--item">
+                    <div class="hair-style-item">
                         <img
-                            class="block--item-thumb"
-                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                            class="hair-style-thumb"
+                            src="./img/Hair item 1.jpg"
                             alt=""
                         />
-                        <div class="block-subtitle">
+                        <div class="hair-style-content">
                             <div class="row">
-                                <h3 class="block--item-title">Beachy waves</h3>
+                                <h3 class="hair-name">Beachy waves</h3>
                                 <img src="./img/Rating course.svg" alt="Star" />
                             </div>
-                            <p class="block--item-desc">
+                            <p class="hair-style-desc line-clamp">
                                 Beach waves are a popular hair style that gives
                                 a relaxed, effortless and natural look. As the
                                 name suggests, this style is inspired by the
@@ -431,67 +435,57 @@
                             </p>
                             <div class="block-cta row">
                                 <strong class="style-m">$120.75</strong>
-                                <p class="style-btn style-course1">Book Now</p>
+                                <a href="" class="booking">Booking Now</a>
+                                <!-- <p class="style-btn style-course1">Book Now</p> -->
                             </div>
                         </div>
                     </div>
                     <!-- Course 2 -->
-                    <div class="block--item">
+                    <div class="hair-style-item">
                         <img
-                            class="block--item-thumb"
-                            src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                            class="hair-style-thumb"
+                            src="./img/Hair item 2.jpg"
                             alt=""
                         />
-                        <div class="block-subtitle" id="price">
+                        <div class="hair-style-content" id="price">
                             <div class="row">
-                                <h3 class="block--item-title">
-                                    Layered haircut
-                                </h3>
-                                <img
-                                    src="./asset/img/Rating course.svg"
-                                    alt="Star"
-                                />
+                                <h3 class="hair-name">Layered haircut</h3>
+                                <img src="./img/Rating course.svg" alt="Star" />
                             </div>
-                            <p class="block--item-desc">
-                                Beach Waves Are A Popular Hair Style That Gives
-                                A Relaxed, Effortless And Natural Look. As The
-                                Name Suggests, This Style Is Inspired By The
-                                Soft, Tousled Waves That Are Often Seen At The
-                                Beach.
+                            <p class="hair-style-desc line-clamp">
+                                "Add depth and texture to your hair with a
+                                layered haircut. Get a versatile and
+                                low-maintenance style that enhances your natural
+                                features."
                             </p>
                             <div class="block-cta row">
                                 <strong class="style-m">$120.75</strong>
-                                <p class="style-btn">Book Now</p>
+                                <a href="" class="booking">Booking Now</a>
                             </div>
                         </div>
                     </div>
                     <!-- Course 3 -->
-                    <div class="block--item">
+                    <div class="hair-style-item">
                         <img
-                            class="block--item-thumb"
-                            src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            class="hair-style-thumb"
+                            src="./img/hair item 3.jpg"
                             alt=""
                         />
-                        <div class="block-subtitle">
+                        <div class="hair-style-content">
                             <div class="row">
-                                <h3 class="block--item-title">
+                                <h3 class="hair-name">
                                     Half-up half-down style
                                 </h3>
-                                <img
-                                    src="./asset/img/Rating course.svg"
-                                    alt="Star"
-                                />
+                                <img src="./img/Rating course.svg" />
                             </div>
-                            <p class="block--item-desc">
-                                Beach Waves Are A Popular Hair Style That Gives
-                                A Relaxed, Effortless And Natural Look. As The
-                                Name Suggests, This Style Is Inspired By The
-                                Soft, Tousled Waves That Are Often Seen At The
-                                Beach.
+                            <p class="hair-style-desc line-clamp">
+                                "Half-up half-down style: the perfect balance
+                                between chic and casual. Elevate your look with
+                                this versatile and effortless hairstyle."
                             </p>
                             <div class="block-cta row">
                                 <strong class="style-m">$120.75</strong>
-                                <p class="style-btn">Book Now</p>
+                                <a href="" class="booking">Booking Now</a>
                             </div>
                         </div>
                     </div>

@@ -1,15 +1,15 @@
-// Change the color of nav-item when u mouseover
+// // Change the color of nav-item when u mouseover
 let navItems = document.querySelectorAll(".nav-item");
-navItems.forEach(function (navItem) {
-    let navTitle = navItem.querySelector(".nav-title");
+// navItems.forEach(function (navItem) {
+//     let navTitle = navItem.querySelector(".nav-title");
 
-    navItem.addEventListener("mouseover", function () {
-        navTitle.style.color = "#fff";
-    });
-    navItem.addEventListener("mouseleave", function () {
-        navTitle.style.color = "#eee5d6";
-    });
-});
+//     navItem.addEventListener("mouseover", function () {
+//         navTitle.style.color = "#fff";
+//     });
+//     navItem.addEventListener("mouseleave", function () {
+//         navTitle.style.color = "#eee5d6";
+//     });
+// });
 // Show the sub-menu and change the color when mouseover
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener("mouseover", function () {
@@ -47,3 +47,19 @@ btnExitreg.addEventListener("click", function () {
     regElement.style.display = "none";
 });
 //
+// Scroll to top website and sticky head off
+let prevScrollPos = window.pageYOffset;
+let headerElement = document.getElementById("header_block");
+
+window.onscroll = function () {
+    let topPos = window.pageYOffset;
+    if (prevScrollPos > topPos) {
+        headerElement.classList.add("active");
+    } else {
+        headerElement.classList.remove("active");
+    }
+    prevScrollPos = topPos;
+    if (topPos == 0) {
+        headerElement.classList.remove("active");
+    }
+};

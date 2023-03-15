@@ -11,19 +11,21 @@ html {
 
     --primary-gradient: linear-gradient(
         to right,
-        #e2caa2ee,
-        rgba(197, 175, 134, 0.927),
+        #e2caa2eb,
+        rgba(197, 175, 134, 0.911),
         #6a593dec
     );
-    --primary-gradient-left: linear-gradient(
-        to left,
-        #e2caa2ee,
-        rgba(197, 175, 134, 0.927),
-        #6a593dec
-    );
+    --primary-Popular: linear-gradient(to right, #ffdab9, #f3e960, #e5eb37);
+    --color-hair-item: "#bd8686";
 }
 
 /* Common */
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 .row {
     display: flex;
     justify-content: center;
@@ -184,16 +186,21 @@ input:focus {
 }
 
 /*-----Header Block---- */
+.active {
+    transform: translateY(-100%);
+}
 
 #header_block {
     position: sticky;
     top: 0;
-    height: 10vh;
+    height: 12vh;
     display: flex;
     align-items: center;
     background-image: var(--primary-gradient);
     border-bottom: solid 1px #efdec3;
     z-index: 2;
+    backdrop-filter: blur(2px);
+    transition: all 0.7s ease-in;
 }
 #header_block a {
     color: var(--primary-desc);
@@ -232,7 +239,7 @@ input:focus {
     color: white;
 }
 .nav-sub-list {
-    background-color: #6a593ddb;
+    background-color: #6a593d;
     position: absolute;
     width: 120px;
     top: 55px;
@@ -245,9 +252,7 @@ input:focus {
 .nav-sub-item:hover {
     background-color: #f1e4cd1f;
 }
-.nav-sub-item {
-    border-bottom: 1px solid #efdec32e;
-}
+
 .nav-sub-list a {
     display: block;
     padding: 10px;
@@ -279,8 +284,8 @@ input:focus {
 /*-----Hero Block---- */
 #hero_block {
     position: relative;
-    height: 90vh;
-    overflow: hidden;
+    height: 100vh;
+    margin-top: -70px;
     background-image: var(--primary-gradient);
     box-shadow: 0px 0px 10px rgba(168, 160, 137, 0.5);
 }
@@ -300,9 +305,9 @@ input:focus {
 #hero_block img {
     position: absolute;
     object-fit: cover;
-    height: 90vh;
-    top: 0%;
-    right: 2%;
+    height: 85vh;
+    top: 13%;
+    right: 5%;
 }
 
 .hero-cta {
@@ -338,25 +343,26 @@ input:focus {
 .hero-btn:focus {
     background: white;
 }
-.hero-booking,
+.booking,
 .hero-cta-btn {
-    padding: 20px 30px;
+    padding: 15px 15px;
     background-color: #ffb900;
     color: #ffffff;
     border-radius: 25px;
     font-size: 1.5rem;
     line-height: 26px;
     transition: all 0.5s ease-out;
+    font-weight: 600px;
 }
-.hero-booking:hover {
+.booking:hover {
     background-image: linear-gradient(
         43deg,
-        #4158d0 0%,
+        #ced041 0%,
         #c850c0 46%,
         #ffcc70 100%
     );
 
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 .hero-cta-btn:hover {
     background-image: linear-gradient(
@@ -366,7 +372,7 @@ input:focus {
         #ff99ac 100%
     );
 
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 .hero-social-media {
     display: flex;
@@ -375,18 +381,12 @@ input:focus {
 
 /* Popular */
 #Popular_block {
-    background-color: #e2caa2;
-    background-image: linear-gradient(
-        162deg,
-        #e2caa2 0%,
-        #c5af86 50%,
-        #6a593d 100%
-    );
+    background: linear-gradient(to right, #ffb6c1e2, #add8e6e5, #ffffe0df);
 
     height: 1000px;
 }
 .head_popular {
-    padding-top: 150px;
+    padding-top: 130px;
     justify-content: space-between;
 }
 /* .selector__popular-title {
@@ -398,39 +398,30 @@ input:focus {
     text-align: left;
 } */
 .head_popular-subtitle {
-    background-image: linear-gradient(
-        to right,
-        violet,
-        indigo,
-        blue,
-        green,
-        yellow,
-        orange,
-        red
-    );
+    background-image: var(--primary-Popular);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .head_popular-subtitle a {
     font-family: var(--primary-font);
-    font-size: 3.8rem;
+    font-size: 4.5rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     text-align: left;
     line-height: 48px;
 }
 .head_popular-desc {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-style: italic;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 35px;
     letter-spacing: 0em;
     text-align: left;
     max-width: 70%;
     margin-top: 8px;
-    color: white;
+    color: BLACK;
 }
-*/ .selector__popular-nav {
+.selector__popular-nav {
     justify-content: center;
 }
 .btn-left,
@@ -448,46 +439,64 @@ input:focus {
 .btn-right {
     background-color: orange;
 }
-/* Course */
-.block-list {
+/* Hair style Block */
+.hair-list {
     display: flex;
-    margin-top: 55px;
+    margin-top: 50px;
     column-gap: 30px;
 }
-.block--item-thumb {
+.hair-style-thumb {
     object-fit: cover;
-    max-width: 370px;
     height: 278px;
     border-radius: 12px 12px 0px 0px;
     vertical-align: bottom;
 }
-.block-subtitle {
+.hair-style-content {
     padding: 16px 22px 22px;
     border-radius: 0px 0px 12px 12px;
-    border: 1px solid #d2dfda;
 }
-.block-subtitle:hover {
-    box-shadow: 0px 18px 36px 0px #0000000d;
+.hair-style-content > .row {
+    justify-content: space-between;
+}
+.block-subtitle:first-child {
+    box-shadow: 0px 18px 36px 0px #e02b2be9;
     border: unset;
 }
-.block--item {
+.hair-style-item {
+    box-shadow: 0px 18px 36px 0px #00000042;
+    width: 400px;
     height: 466px;
     border-radius: 12px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    padding-top: ;
 }
-
-.block--item-title {
-    font-size: 1.8rem;
+.hair-style-item:first-child:hover {
+    background-color: #a2e4e0;
+    box-shadow: 0px 18px 36px 0px #b97db9a2;
+}
+.hair-style-item:hover {
+    background-color: #bd8686;
+    box-shadow: 0px 18px 36px 0px #b97db9a2;
+}
+.hair-style-item:nth-child(3):hover {
+    background-color: #41c4dc;
+    box-shadow: 0px 18px 36px 0px #b97db9a2;
+}
+.hair-name {
+    font-size: 2rem;
     font-weight: 600;
     line-height: 30px;
     letter-spacing: 0em;
+    color: rgb(255, 255, 255);
 }
-.block--item-desc {
+.hair-style-desc {
     margin-top: 6px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 0em;
-    color: var(--primary-color-desc);
+    color: white;
 }
 .block-cta {
     margin-top: 12px;
@@ -496,9 +505,9 @@ input:focus {
     line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
-    color: #171100;
+    color: white;
 }
-.style-btn {
+/* .style-btn {
     padding: 12px 24px;
     background-color: #171100;
     color: #ffffff;
@@ -508,7 +517,7 @@ input:focus {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 26px;
-}
+} */
 .block-cta strong {
     font-size: 1.8rem;
     font-weight: 600;
