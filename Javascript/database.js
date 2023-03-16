@@ -37,13 +37,11 @@ signinBTN.addEventListener("click", function () {
 let regBTN = document.querySelector(".btn-register");
 regBTN.addEventListener("click", function () {
     let regElement = document.querySelector("#sign-up-Page");
-    regElement.style.right = "20%";
     regElement.style.display = "block ";
 });
 let btnExitreg = document.querySelector("#sign-up-Page .btn-exit");
 btnExitreg.addEventListener("click", function () {
     let regElement = document.querySelector("#sign-up-Page");
-    regElement.style.right = "-100%";
     regElement.style.display = "none";
 });
 //
@@ -63,3 +61,38 @@ window.onscroll = function () {
         headerElement.classList.remove("active");
     }
 };
+// Scroll hair style list
+let dot1 = document.querySelector(".dot:first-child");
+let dot2 = document.querySelector(".dot:nth-child(2)");
+let btnleft = document.querySelector(".btn-left");
+let btnright = document.querySelector(".btn-right");
+const hairListElement = document.querySelector(".hair-list");
+btnright.addEventListener("click", function (e) {
+    hairListElement.scrollLeft += 1300;
+});
+btnleft.addEventListener("click", function (e) {
+    hairListElement.scrollLeft -= 1300;
+});
+const dots = document.querySelectorAll(".dot");
+let currentDotIndex = 0;
+function highlightDot(dotIndex) {
+    dots[currentDotIndex].classList.remove("large-dot");
+    dots[dotIndex].classList.add("large-dot");
+    currentDotIndex = dotIndex;
+}
+
+hairListElement.addEventListener("scroll", function () {
+    if (hairListElement.scrollLeft >= 0 && hairListElement.scrollLeft < 1300) {
+        highlightDot(0);
+    } else if (
+        hairListElement.scrollLeft >= 1300 &&
+        hairListElement.scrollLeft < 2600
+    ) {
+        highlightDot(1);
+    } else if (
+        hairListElement.scrollLeft >= 2600 &&
+        hairListElement.scrollLeft < 3900
+    ) {
+        highlightDot(2);
+    }
+});

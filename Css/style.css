@@ -15,11 +15,28 @@ html {
         rgb(211 191 155 / 91%),
         #d0c5b3ec
     );
-    --primary-Popular: linear-gradient(to right, #ffdab9, #f3e960, #e5eb37);
+    --primary-Popular: linear-gradient(to right, #ff9333, #f3e960, #e5eb37);
     --color-hair-item: "#bd8686";
 }
 
 /* Common */
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 36px;
+}
+.large-dot {
+    transform: scale(1.8);
+}
+.dot {
+    border-radius: 999px;
+    width: 6px;
+    height: 6px;
+    cursor: pointer;
+    background-color: #ffdab9;
+}
 .line-clamp {
     display: -webkit-box;
     -webkit-line-clamp: var(--line-clamp, 2);
@@ -50,13 +67,14 @@ body {
 #sign-up-Page {
     width: 30%;
     height: 85vh;
-    position: absolute;
+    position: fixed;
     background: #fffffff4;
     transform: translate(-50%, -50%);
     top: 56%;
-    right: -100%;
+    right: 20%;
+    display: none;
     border-radius: 15px;
-    transition: right 0.5s ease;
+    transition: step-end 0.2s ease-in-out;
     z-index: 2;
 }
 /*-----Login Page---- */
@@ -433,25 +451,34 @@ input:focus {
     width: 40px;
     height: 40px;
     margin-left: 18px;
-    box-shadow: 0px 8px 16px 0px #00000012;
+
     border-radius: 999px;
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 .btn-left {
     background: #fffbfb;
 }
+
 .btn-right {
     background-color: orange;
 }
 /* Hair style Block */
 .hair-list {
     display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     margin-top: 50px;
+    border-radius: 10px;
     column-gap: 30px;
+    scroll-behavior: smooth;
 }
 .hair-style-thumb {
     object-fit: cover;
     height: 278px;
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 10px;
     vertical-align: bottom;
 }
 .hair-style-content {
@@ -466,13 +493,13 @@ input:focus {
     border: unset;
 }
 .hair-style-item {
-    box-shadow: 0px 18px 36px 0px #00000042;
-    width: 400px;
-    height: 466px;
-    border-radius: 12px;
-    transition: all 0.5s ease-in-out;
+    scroll-snap-align: center;
+    flex: 0 0 32%;
+    width: 100%;
+    height: 470px;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
     overflow: hidden;
-    padding-top: ;
 }
 .hair-style-item:first-child:hover {
     background-color: #a2e4e0;
