@@ -52,24 +52,6 @@
                     <nav id="nav_block">
                         <ul class="nav_block-list">
                             <li class="nav-item">
-                                <form action="">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    <input
-                                        class="nav-search"
-                                        type="text"
-                                        style="
-                                            width: 80px;
-                                            border: none;
-                                            border-radius: 8px;
-                                            box-shadow: 0 0 4px
-                                                rgba(0, 0, 0, 0.5);
-                                            background-color: #f1f7fa;
-                                        "
-                                        placeholder="Search style"
-                                    />
-                                </form>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-title" href="#">Hair Style</a>
                                 <ul class="nav-sub-list">
                                     <li class="nav-sub-item">
@@ -144,11 +126,11 @@
                         </ul>
                     </nav>
                     <div class="header_register">
-                        <div class="btn btn-login" style="color: #f7f7f7">
+                        <div class="btn btn-login">
                             <a href="#!">Sign In</a>
                         </div>
-                        <div class="btn btn-register" style="color: #f7f7f7">
-                            <a href="#!">Sign Up</a>
+                        <div class="btn btn-register">
+                            <a href="#!">Join us</a>
                         </div>
                     </div>
                 </div>
@@ -306,7 +288,7 @@
             </form>
         </div>
         <!-- -----Hero Block------>
-        <div id="hero_block">
+        <div id="hero_block" class="overlay">
             <div class="content">
                 <div class="hero-body">
                     <h1 class="hero-main-title">Discover Your Perfect Look</h1>
@@ -327,10 +309,25 @@
                                     style="margin-left: 20px"
                                     >About Me</a
                                 >
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                    style="font-size: 15px; color: white"
+                                ></i>
                             </div>
+
+                            <form class="hero-search-booking row" action="">
+                                <i
+                                    class="fa-solid fa-magnifying-glass"
+                                    style="font-size: 35px"
+                                ></i>
+                                <input
+                                    type="text"
+                                    placeholder="CHECK YOUR BOOKING ..."
+                                />
+                            </form>
                         </div>
                         <div class="hero-social-media">
-                            <img src="img/Hero img.png" alt="Blonde girl" />
+                            <img src="img/Hero img.png " alt="Blonde girl" />
                             <div class="link-social-media">
                                 <div
                                     class="login-fb"
@@ -340,9 +337,8 @@
                                         ><i
                                             class="fa-brands fa-facebook-f"
                                             style="
-                                                background-color: blue;
                                                 color: white;
-                                                width: 37px;
+                                                font-size: 30px;
                                             "
                                         ></i
                                     ></a>
@@ -352,14 +348,9 @@
                                         ><i
                                             class="fa-brands fa-instagram"
                                             style="
-                                                background-image: linear-gradient(
-                                                    199deg,
-                                                    #4158d0 0%,
-                                                    #c850c0 46%,
-                                                    #ffcc70 100%
-                                                );
                                                 color: white;
                                                 margin-left: 10px;
+                                                font-size: 30px;
                                             "
                                         ></i
                                     ></a>
@@ -374,6 +365,7 @@
                                                 color: white;
                                                 width: 37px;
                                                 margin-left: 10px;
+                                                font-size: 30px;
                                             "
                                         ></i>
                                     </a>
@@ -384,7 +376,7 @@
                 </div>
             </div>
         </div>
-        <!-- Popular  -->
+        <!-- Popular Block -->
         <div id="Popular_block">
             <div class="content">
                 <div class="head_popular row">
@@ -719,6 +711,278 @@
                     <span class="dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        <!-- Service Block -->
+        <div id="service_block">
+            <div class="content">
+                <div class="service_head row">
+                    <span class="service_head-question"
+                        >What we do for you?</span
+                    >
+                    <h3 class="service_head-subtitle">Our Services</h3>
+                </div>
+                <div class="service_body row">
+                    <!-- Column 1 -->
+
+                    <!-- service item 1 -->
+                    <div class="service_item" data-content="service_item1_ct">
+                        <div class="service_content">
+                            <img
+                                src="./img/Icon Hair cutting.png"
+                                alt="Icon Hair cutting"
+                            />
+                            <h3 class="service-name-item">Hair cutting</h3>
+                        </div>
+                    </div>
+                    <!-- service item 2 -->
+                    <div class="service_item" data-content="service_item2_ct">
+                        <div class="service_content">
+                            <img
+                                src="./img/hair_styling.png"
+                                alt="hair_styling"
+                            />
+                            <h3 class="service-name-item">Hair styling</h3>
+                        </div>
+                    </div>
+                    <!-- service item 3 -->
+                    <div class="service_item" data-content="service_item3_ct">
+                        <div class="service_content">
+                            <img src="./img/hair_color.png" alt="hair_color" />
+                            <h3 class="service-name-item">Hair color</h3>
+                        </div>
+                    </div>
+                    <!-- service item 4 -->
+                    <div class="service_item" data-content="service_item4_ct">
+                        <div class="service_content">
+                            <img
+                                src="./img/hair_permanent.png"
+                                alt="hair_permanent"
+                            />
+                            <h3 class="service-name-item">Permanent</h3>
+                        </div>
+                    </div>
+
+                    <!-- service item 5 -->
+                    <div class="service_item" data-content="service_item5_ct">
+                        <div class="service_content">
+                            <img
+                                src="./img/hair_extensions.png"
+                                alt="hair_extensions"
+                            />
+                            <h3 class="service-name-item">extensions</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service_container-content"></div>
+
+                <!-- Data content for all service item -->
+                <div id="service_item1_ct" class="hidden">
+                    <div class="service_detail-desc">
+                        <h3 style="color: white; font-size: 4rem">
+                            Lorem ipsum dolor.
+                        </h3>
+                        <p
+                            style="
+                                font-size: 1.8rem;
+                                line-height: 35px;
+                                margin-top: 30px;
+                                color: white;
+                            "
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Consectetur, delectus? Totam voluptatum
+                            aliquam sequi culpa incidunt voluptate enim ipsam
+                            inventore aspernatur deleniti nobis cumque laborum
+                            distinctio amet veniam, a quod.
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                margin-top: 30px;
+                                color: blue;
+                                outline: unset;
+                            "
+                        >
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                            <a href=""
+                                >Lorem ipsum dolor sit amet consectetur.</a
+                            >
+                        </div>
+                        <div style="margin-top: 40px">
+                            <a class="booking" href="">Booking Now</a>
+                        </div>
+                    </div>
+                    <div class="service_detail-img">
+                        <img src="./img/hair cutting 2.JPG" alt="" />
+                    </div>
+                </div>
+                <div id="service_item2_ct" class="hidden">
+                    <div class="service_detail-desc">
+                        <h3 style="color: white; font-size: 4rem">
+                            Lorem ipsum dolor.
+                        </h3>
+                        <p
+                            style="
+                                font-size: 1.8rem;
+                                line-height: 35px;
+                                margin-top: 30px;
+                                color: white;
+                            "
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Consectetur, delectus? Totam voluptatum
+                            aliquam sequi culpa incidunt voluptate enim ipsam
+                            inventore aspernatur deleniti nobis cumque laborum
+                            distinctio amet veniam, a quod.
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                margin-top: 30px;
+                                color: blue;
+                                outline: unset;
+                            "
+                        >
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                            <a href=""
+                                >Lorem ipsum dolor sit amet consectetur.</a
+                            >
+                        </div>
+                        <div style="margin-top: 40px">
+                            <a class="booking" href="">Booking Now</a>
+                        </div>
+                    </div>
+                    <div class="service_detail-img">
+                        <img src="./img/hair cutting 2.JPG" alt="" />
+                    </div>
+                </div>
+                <div id="service_item3_ct" class="hidden">
+                    <div class="service_detail-desc">
+                        <h3 style="color: white; font-size: 4rem">
+                            Lorem ipsum dolor.
+                        </h3>
+                        <p
+                            style="
+                                font-size: 1.8rem;
+                                line-height: 35px;
+                                margin-top: 30px;
+                                color: white;
+                            "
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Consectetur, delectus? Totam voluptatum
+                            aliquam sequi culpa incidunt voluptate enim ipsam
+                            inventore aspernatur deleniti nobis cumque laborum
+                            distinctio amet veniam, a quod.
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                margin-top: 30px;
+                                color: blue;
+                                outline: unset;
+                            "
+                        >
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                            <a href=""
+                                >Lorem ipsum dolor sit amet consectetur.</a
+                            >
+                        </div>
+                        <div style="margin-top: 40px">
+                            <a class="booking" href="">Booking Now</a>
+                        </div>
+                    </div>
+                    <div class="service_detail-img">
+                        <img src="./img/hair cutting 2.JPG" alt="" />
+                    </div>
+                </div>
+                <div id="service_item4_ct" class="hidden">
+                    <div class="service_detail-desc">
+                        <h3 style="color: white; font-size: 4rem">
+                            Lorem ipsum dolor.
+                        </h3>
+                        <p
+                            style="
+                                font-size: 1.8rem;
+                                line-height: 35px;
+                                margin-top: 30px;
+                                color: white;
+                            "
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Consectetur, delectus? Totam voluptatum
+                            aliquam sequi culpa incidunt voluptate enim ipsam
+                            inventore aspernatur deleniti nobis cumque laborum
+                            distinctio amet veniam, a quod.
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                margin-top: 30px;
+                                color: blue;
+                                outline: unset;
+                            "
+                        >
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                            <a href=""
+                                >Lorem ipsum dolor sit amet consectetur.</a
+                            >
+                        </div>
+                        <div style="margin-top: 40px">
+                            <a class="booking" href="">Booking Now</a>
+                        </div>
+                    </div>
+                    <div class="service_detail-img">
+                        <img src="./img/hair cutting 2.JPG" alt="" />
+                    </div>
+                </div>
+                <div id="service_item5_ct" class="hidden">
+                    <div class="service_detail-desc">
+                        <h3 style="color: white; font-size: 4rem">
+                            Lorem ipsum dolor.
+                        </h3>
+                        <p
+                            style="
+                                font-size: 1.8rem;
+                                line-height: 35px;
+                                margin-top: 30px;
+                                color: white;
+                            "
+                        >
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Consectetur, delectus? Totam voluptatum
+                            aliquam sequi culpa incidunt voluptate enim ipsam
+                            inventore aspernatur deleniti nobis cumque laborum
+                            distinctio amet veniam, a quod.
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                margin-top: 30px;
+                                color: blue;
+                                outline: unset;
+                            "
+                        >
+                            <a href="">Lorem ipsum dolor sit amet.</a>
+                            <a href=""
+                                >Lorem ipsum dolor sit amet consectetur.</a
+                            >
+                        </div>
+                        <div style="margin-top: 40px">
+                            <a class="booking" href="">Booking Now</a>
+                        </div>
+                    </div>
+                    <div class="service_detail-img">
+                        <img src="./img/hair cutting 2.JPG" alt="" />
+                    </div>
                 </div>
             </div>
         </div>

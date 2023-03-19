@@ -1,15 +1,15 @@
 // // Change the color of nav-item when u mouseover
 let navItems = document.querySelectorAll(".nav-item");
-// navItems.forEach(function (navItem) {
-//     let navTitle = navItem.querySelector(".nav-title");
+navItems.forEach(function (navItem) {
+    let navTitle = navItem.querySelector(".nav-title");
 
-//     navItem.addEventListener("mouseover", function () {
-//         navTitle.style.color = "#fff";
-//     });
-//     navItem.addEventListener("mouseleave", function () {
-//         navTitle.style.color = "#eee5d6";
-//     });
-// });
+    navItem.addEventListener("mouseover", function () {
+        navTitle.style.color = "#fff";
+    });
+    navItem.addEventListener("mouseleave", function () {
+        navTitle.style.color = "#eee5d6";
+    });
+});
 // Show the sub-menu and change the color when mouseover
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].addEventListener("mouseover", function () {
@@ -53,12 +53,15 @@ window.onscroll = function () {
     let topPos = window.pageYOffset;
     if (prevScrollPos > topPos) {
         headerElement.classList.add("active");
+        headerElement.classList.add("active-filter");
     } else {
         headerElement.classList.remove("active");
+        headerElement.classList.add("active-filter");
     }
     prevScrollPos = topPos;
     if (topPos == 0) {
         headerElement.classList.remove("active");
+        headerElement.classList.remove("active-filter");
     }
 };
 // Scroll hair style list
@@ -96,3 +99,4 @@ hairListElement.addEventListener("scroll", function () {
         highlightDot(2);
     }
 });
+// Show an post when click on element
