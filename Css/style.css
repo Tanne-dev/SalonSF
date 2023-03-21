@@ -71,7 +71,6 @@ body {
     font-size: 1.6rem;
     font-family: var(--primary-font);
     text-transform: capitalize;
-    height: 5000px;
 }
 /*-----Sign Up Page---- */
 #sign-up-Page {
@@ -148,13 +147,12 @@ body {
     margin: 10px auto;
 }
 
-.login-inst i,
-.login-fb i,
-.google-map i {
+.link i {
     font-size: 20px;
     border-radius: 10px;
     padding: 10px;
 }
+
 .fa-facebook-f:before {
     margin-left: 2px;
 }
@@ -323,7 +321,7 @@ input:focus {
     content: "";
     position: absolute;
     height: 150px;
-    top: 79.2%;
+    top: auto;
     right: 0;
     bottom: 0;
     left: 0;
@@ -375,7 +373,9 @@ input:focus {
     font-weight: 500;
     font-size: 6.2rem;
     line-height: 1.19;
-    color: #3d1e02;
+    background-image: var(--primary-Popular-subtitle);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .hero-title {
     width: 50%;
@@ -603,7 +603,6 @@ input:focus {
     background-image: url(../img/New\ background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 200px;
 }
 .service_head {
     padding-top: 68px;
@@ -634,8 +633,7 @@ input:focus {
     margin-top: 71px;
     justify-content: space-between;
 }
-.service_container {
-}
+
 .service_item {
     width: 180px;
     margin-bottom: 24px;
@@ -684,7 +682,7 @@ input:focus {
     height: 400px;
     padding: 20px;
     background-color: rgba(88, 36, 36, 0.725);
-    transition: all 0.5s easy;
+    transition: all 0.5s ease;
 
     border-radius: 10px;
 }
@@ -724,6 +722,135 @@ input:focus {
     color: #f3f7d1;
     font-size: 1.7rem;
 }
-#service_item2_ct {
-    transition: all 1s ease;
+/* ----- Review Block ------*/
+.review_block {
+    background-image: url(../img/Background\ layour\ review.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+}
+.review-customer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.review-img-customer {
+    width: 300px;
+    height: 300px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+.review-body {
+    padding-top: 10%;
+    justify-content: space-around;
+}
+
+.review-name-customer {
+    margin-top: 18px;
+    font-family: var(--font-sen);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 34px;
+    background-image: var(--primary-Popular-subtitle);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.review-subjekt-customer {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 26px;
+    color: #144a16;
+    margin-top: 4px;
+}
+.review-list-customer {
+    width: 30px;
+    height: 6px;
+    margin-top: 28px;
+}
+.review-desc {
+    max-width: 740px;
+    font-family: var(--primary-h1);
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 40px;
+    color: #ffffff;
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+.review-title {
+    box-shadow: -1px 1px 69px 3px rgba(78, 73, 73, 0.75);
+    background-image: url(../img/Background\ review.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.dots-fixed {
+    margin-top: -10px;
+}
+
+/* Footer Block */
+#footer {
+    background-color: #f5f5f7;
+    height: 62vh;
+}
+.footer_body {
+    padding: 60px 0 38px;
+    justify-content: space-between;
+}
+.footer_body-subtitle {
+    width: 267px;
+}
+.footer_logo {
+    object-fit: cover;
+    width: 270px;
+    height: 100px;
+}
+.footer_desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 18px 12px 0 12px;
+    color: #424245;
+}
+.footer_body-social {
+    margin-top: 18px;
+    width: 111px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_body-title {
+    padding: 0 48px 14px 0;
+    border-bottom: 1px solid#83807b;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    width: 130px;
+    text-align: left;
+    color: #424245;
+}
+
+.footer_body-item-info {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 28px;
+    margin-left: -10px;
+    color: #424245;
+}
+
+.copyright {
+    margin-top: 7%;
+    border-top: 1px solid #83807b;
+}
+.copyright p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #424245;
 }

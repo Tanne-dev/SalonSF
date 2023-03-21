@@ -102,11 +102,13 @@ hairListElement.addEventListener("scroll", function () {
 // Show an post when click on element
 const itemsServiceElement = document.querySelectorAll(".service_item");
 const itemsContainer = document.querySelector(".service_container");
+
 itemsServiceElement.forEach(function (item) {
     item.addEventListener("click", function () {
         const contentId = item.getAttribute("data-content");
+        let serviceBlockElement = document.getElementById("service_block");
         const content = document.getElementById(contentId);
-        content.style.transition = "all 1s ease";
+        serviceBlockElement.style.paddingBottom = "200px";
         itemsContainer.innerHTML = content.innerHTML;
     });
 });
