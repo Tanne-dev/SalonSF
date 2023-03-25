@@ -100,9 +100,18 @@ itemsServiceElement.forEach(function (item) {
         const containerElement =
             serviceBlockElement.querySelector(".service_container");
         containerElement.style.opacity = "1";
-        serviceBlockElement.style.paddingBottom = "200px";
         itemsContainer.innerHTML = content.innerHTML;
     });
 });
-// show image  smooth
-document.querySelector(".hero-img").classList.add("show");
+//Slide Image
+slideIndex = 0;
+slideShow();
+function slideShow() {
+    const slides = document.getElementsByClassName("slideshow-image");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = 0;
+    }
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].style.opacity = 1;
+    setTimeout(slideShow, 3000);
+}
