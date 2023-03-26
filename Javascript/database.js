@@ -84,10 +84,25 @@ slideIndex = 0;
 slideShow();
 function slideShow() {
     const slides = document.getElementsByClassName("slideshow-image");
+
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.opacity = 0;
     }
     slideIndex = (slideIndex + 1) % slides.length;
     slides[slideIndex].style.opacity = 1;
     setTimeout(slideShow, 3000);
+}
+// Slide review
+let slideReviewIndex = 0;
+reviewShow();
+
+function reviewShow() {
+    const slidesReview = document.getElementsByClassName("testimonial_content");
+    for (let i = 0; i < slidesReview.length; i++) {
+        slidesReview[i].style.opacity = 0;
+    }
+    slideReviewIndex = (slideReviewIndex + 1) % slidesReview.length;
+    slidesReview[slideReviewIndex].style.opacity = 1;
+
+    setTimeout(reviewShow, 3000);
 }

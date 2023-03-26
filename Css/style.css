@@ -36,25 +36,19 @@ html {
     font-family: var(--cormorant-font);
     font-style: italic;
     height: auto;
-    color: rgb(91, 87, 87);
-    text-decoration: none;
-    white-space: normal;
-    width: 500px;
-    min-height: 0px;
-    min-width: 0px;
+    color: #494949;
     max-height: none;
     max-width: none;
     text-align: left;
     line-height: 28px;
-    letter-spacing: 0px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2.2rem;
     transform-origin: 50% 50%;
     opacity: 1;
     visibility: visible;
 }
 .container-desc {
-    padding: 0% 17% 0% 17%;
+    padding: 0 20%;
 }
 .space-size {
     height: var(--space-size);
@@ -534,7 +528,7 @@ input:focus {
 }
 .hair-style-thumb {
     object-fit: cover;
-    height: 500px;
+    height: 450px;
     vertical-align: bottom;
 }
 .hair-style-content {
@@ -685,73 +679,83 @@ input:focus {
 
 /* ----- Review Block ------*/
 .review_block {
-    background-image: url(../img/Background\ layour\ review.jpg);
+    background-image: url(../img/background\ body.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 110vh;
+    position: relative;
+
+    padding: 120px 0 220px 0;
 }
-.review-customer {
+.review-container-content {
+    text-align: center;
+}
+.testimonial_author {
+    font-family: var(--cormorant-font);
+    font-size: 1.7rem;
+    line-height: 23px;
+    letter-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: capitalize;
+    color: #000000;
+    margin-top: 22px;
+    margin-bottom: 130px;
+}
+.testimonial_content {
+    width: 100%;
+    padding: 0 20%;
+    float: left;
+    margin-right: -100%;
+    position: relative;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+.testimonial_text_holder {
+    position: relative;
+    display: block;
+}
+.testimonial_text_inner {
+    display: block;
+}
+.testimonial_text_inner .desc {
+    font-family: var(--cormorant-font);
+    font-size: 2.2rem;
+    line-height: 29px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    text-transform: none;
+    color: #494949;
+}
+.testimonial_author {
+    font-family: var(--cormorant-font);
+    margin-top: 24px;
+    font-size: 1.7rem;
+    line-height: 23px;
+    letter-spacing: 0px;
+    font-weight: 500;
+    font-style: none;
+    text-transform: capitalize;
+    color: #000000;
+}
+.flex_direction-navigation {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    width: 60%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
 }
-.review-img-customer {
-    width: 300px;
-    height: 300px;
-    border-radius: 999px;
-    object-fit: cover;
+.review-navigation-left::before {
+    content: url(../img/Slide\ left.svg);
 }
-.review-body {
-    padding-top: 10%;
-    justify-content: space-around;
+.review-navigation-right::before {
+    content: url(../img/slide\ right.svg);
 }
-
-.review-name-customer {
-    margin-top: 18px;
-    font-family: var(--font-sen);
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 34px;
-    background-image: var(--primary-Popular-subtitle);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.review-subjekt-customer {
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 26px;
-    color: #144a16;
-    margin-top: 4px;
-}
-.review-list-customer {
-    width: 30px;
-    height: 6px;
-    margin-top: 28px;
-}
-.review-desc {
-    max-width: 740px;
-    font-family: var(--primary-h1);
-    font-size: 2.6rem;
-    font-weight: 400;
-    line-height: 40px;
-    color: #ffffff;
-    margin-left: 30px;
-    padding-bottom: 10px;
-}
-.review-title {
-    box-shadow: -1px 1px 69px 3px rgba(78, 73, 73, 0.75);
-    background-image: url(../img/Background\ review.jpg);
-    background-size: cover;
-    border-radius: 10px;
-}
-
 /* Footer Block */
 #footer {
-    background-color: #f5f5f7;
-    height: 62vh;
+    padding: 145px 0 127px 0;
 }
 .footer_body {
-    padding: 60px 0 38px;
     justify-content: space-between;
 }
 .footer_body-subtitle {
@@ -777,6 +781,7 @@ input:focus {
     display: flex;
     justify-content: space-between;
 }
+
 .footer_body-title {
     padding: 0 48px 14px 0;
     border-bottom: 1px solid#83807b;
@@ -801,7 +806,6 @@ input:focus {
 }
 
 .copyright {
-    margin-top: 7%;
     border-top: 1px solid #83807b;
 }
 .copyright p {
