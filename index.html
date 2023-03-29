@@ -36,22 +36,54 @@
         <meta
             name="description"
             content="Välkommen till vår salongswebbplats! Vi är en professionell och erfaren skönhetssalong som erbjuder en mängd olika behandlingar för att hjälpa dig att se och känna dig på ditt allra bästa sätt. Vi erbjuder allt från klippning och färgning till manikyr, pedikyr och ansiktsbehandlingar. Vår passion är att ge våra kunder den ultimata upplevelsen av avkoppling och skönhet, och vi ser fram emot att välkomna dig till vår salong. Låt oss ta hand om dig och din skönhet!"
-        />
-        <!-- Dòng này khi nào hoàn thiện web sẽ gắn link trang chính vào đây để phân biệt page chính page phụ -->
-        <!-- <link rel="canonical" href="https://example.com/page1" /> -->
+            />
+            <!-- Dòng này khi nào hoàn thiện web sẽ gắn link trang chính vào đây để phân biệt page chính page phụ -->
+            <!-- <link rel="canonical" href="https://example.com/page1" /> -->
         <title>SF Studio Salon</title>
     </head>
     <body>
         
         </div>
-        <header id="header_block">
-            <div class="header_body">
-                <div id="logo_header">
+        <header id="header_block" >
+            <div class="header_body ">
+                
+                <!-- Navigation mobile -->
+                <label for="nav_mobile_input" class="nav_button-mobile">
+                    <i class="fa-solid fa-bars fa-flip" style="color: #f7f7f7;"></i>
+                </label>
+                <input type="checkbox" name="" id="nav_mobile_input" ;">
+                <div class="logo_header >
                     <a href="#" rel=""
                         ><img src="./img/Logo header.png" alt="Sofia Salon"
                     /></a>
                 </div>
-                <nav id="nav_block">
+                
+                
+                <!-- Nav overlay -->
+                <label for="nav_mobile_input" class="nav_overlay"></label>
+                <nav class="nav_mobile">
+                        <div class="space-inner"></div>
+                        <div class="nav_mobile--close"><i class="fa-solid fa-x"></i></div>
+                        <ul class="nav_mobile-list">
+                            <li >
+                                <a class="nav_mobile-item" href="#">Home</a>
+                            </li>
+                            <li >
+                                <a class="nav_mobile-item" href="#Popular_block">Style</a>
+                               
+                            </li>
+                            <li >
+                                <a class="nav_mobile-item" href="#service_block"
+                                    >Services</a
+                                >
+                            </li>
+                            <li >
+                                <a class="nav_mobile-item" href="#">Price</a>
+                            </li>
+                     </ul>
+                 </nav>    
+                <!-- Navigation pc -->
+                <nav id="nav_pc" >
                     <ul class="nav_block-list">
                         <li class="nav-item">
                             <a class="nav-title" href="#">Home</a>
@@ -100,7 +132,7 @@
                 <div class="header_cta">
                     <a class="btn" href="#">Book Now</a>
                 </div>
-            </div>
+            </>
         </header>
 
         <!-- ---- Style btn time----- -->
@@ -638,7 +670,7 @@
                                 <div class="testimonial_content_inner">
                                     <div class="testimonial_text_holder">
                                         <div class="testimonial_text_inner">
-                                            <p class="desc">SF Salon is a great salon with professional and friendly staff. They did an amazing job on my hair and I left feeling very satisfied. I would definitely recommend them to anyone looking for a high-quality salon experience.”.”</p>
+                                            <p class="desc">SF Salon is a great salon with professional and friendly staff. They did an amazing job on my hair and I left feeling very satisfied. I would definitely recommend them to anyone looking for a high-quality salon experience.”</p>
                                             <p class="testimonial_author">Kevyn Aucoin <br> Make-up Artist</p>
                                         </div>
                                     </div>
@@ -648,7 +680,7 @@
                                 <div class="testimonial_content_inner">
                                     <div class="testimonial_text_holder">
                                         <div class="testimonial_text_inner">
-                                            <p class="desc " >“SF Salon is an outstanding salon with an excellent team of stylists. The staff is friendly, knowledgeable, and passionate about their work. They take the time to listen to your needs and provide recommendations tailored to your hair type and style. I had a fantastic experience at SF Salon and was extremely happy with the results. My hair looked and felt amazing! I would highly recommend this salon to anyone looking for a high-quality and enjoyable salon experience..”</p>
+                                            <p class="desc " >“SF Salon is an outstanding salon with an excellent team of stylists. The staff is friendly, knowledgeable, and passionate about their work...”</p>
                                             <p class="testimonial_author">Linda Evangelista <br> Top Model</p>
                                         </div>
                                     </div>
@@ -680,52 +712,40 @@
                             src="./img/Logo header.png"
                             alt="Lesson"
                         />
-                        <p class="footer_desc">
+                        <p class="title">
                             Experience beautiful hair transformations at Our
-                            Studio. Schedule your appointment today!
+                            Studio.
                         </p>
                     </div>
                     <!-- About Us  -->
 
-                    <div class="footer_body-item">
-                        <h3 class="footer_body-title">Company</h3>
+                    <div class="footer_container">
+                        <h3 class="footer-title">INFO</h3>
 
-                        <div class="footer_body-item-info">
-                            <p class="footer_desc">About Us</p>
-                            <p class="footer_desc">Features</p>
-                            <p class="footer_desc">Our Pricing</p>
-                            <p class="footer_desc">Latest News</p>
+                        <div class="footer_container-inner">
+                            <p class="desc">Adresse: Seestrasse 21,Zurich
+
+                            </p>
+                            <p class="desc">Telephone: 99 4 11 78 12; 99 4 11 78 70 12
+
+                            </p>
+                            <p class="desc">Write us: bridge@example.com
+
+                            </p>
                         </div>
                     </div>
-                    <!-- Support -->
-                    <div class="footer_body-item">
-                        <h3 class="footer_body-title">Support</h3>
-
-                        <div class="footer_body-item-info">
-                            <p class="footer_desc">FAQ’s</p>
-                            <p class="footer_desc">Terms & Conditions</p>
-                            <p class="footer_desc">Privacy Policy</p>
-                            <p class="footer_desc">Contact Us</p>
-                        </div>
-                    </div>
+        
                     <!-- Adress -->
-                    <div class="footer_body-item" style="margin-top: -25px">
-                        <h3 class="footer_body-title">Address</h3>
+                    <div class="footer_container" style="margin-top: -25px">
+                        <h3 class="footer-title">SUBSCRIBE</h3>
 
-                        <div
-                            class="footer_body-item--info"
-                            style="margin-left: -10px"
-                        >
-                            <p class="footer_desc" style="width: 231px">
-                                <strong>Location</strong>: 27 Division St, New
-                                York, NY 10002, USA
-                            </p>
+                        <div class="footer_container-inner">
+                            <form action="">
+                                <input type="email" name="text" placeholder="Email" id="">
+                            </form>
+                            
                             <p class="footer_desc">
-                                <strong>Email</strong>:
-                                quachtienthanh92@gmail.com
-                            </p>
-                            <p class="footer_desc">
-                                <strong>Phone</strong>: +46 709 39 4679
+                                Be the first to know about offers
                             </p>
                         </div>
                     </div>

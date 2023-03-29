@@ -106,3 +106,9 @@ function reviewShow() {
 
     setTimeout(reviewShow, 3000);
 }
+// click button mobile
+let btnMenuMobile = document.querySelector(".mobile_menu_button");
+let menuListMobile = document.querySelector(".mobile_menu-list");
+btnMenuMobile.addEventListener("click", function () {
+    menuListMobile.style.opacity = 1;
+});
