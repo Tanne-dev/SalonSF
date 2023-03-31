@@ -257,6 +257,7 @@ input:focus {
     color: #333;
     font-size: 2.2rem;
     border-bottom: solid 1px ;
+    z-index: 100;
     
 }
 .nav_mobile--close{
@@ -441,6 +442,9 @@ input:focus {
     flex-direction: column;
 }
 @media only screen and (max-width: 1023px) {
+    body{
+        overflow-x: ;
+    }
     .nav_button-mobile {
         display: block;
     }
@@ -451,12 +455,19 @@ input:focus {
         display: none;
     }
     .logo_header {
+        margin: auto;
+        top: 10px;
     }
     .link-social-media {
         display: none;
     }
     #header_block {
+        
         background: #ffffff5e;
+    }
+    #hero_block{
+        text-align: center;
+        height: 0;
     }
     .hero-main-title {
         font-size: 2.5rem;
@@ -471,10 +482,11 @@ input:focus {
     }
     .slideshow-image img{
         height: 40vh;
+        
     }
     .slideshow_container {
-        width: 90%;
-        top: 60%;
+        top: 22em;
+        max-width: calc(100% - 48px);
     }
     .hightlight{
         font-size: 8rem;
@@ -482,14 +494,8 @@ input:focus {
     .hero-title .desc{
         display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; -webkit-line-clamp: 2;line-clamp: 2; 
     }
-    #hero_block{
-        text-align: center;
-    }
-    .slideshow_container{
-        width: 95%;
-      height: 30vh;
-      top: 22em;
-    }
+
+
 }
 /* Blog Salon */
 #blog_block {
