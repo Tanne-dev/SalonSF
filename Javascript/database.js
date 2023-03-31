@@ -107,8 +107,21 @@ function reviewShow() {
     setTimeout(reviewShow, 3000);
 }
 // click button mobile
+// click button mobile
 let btnMenuMobile = document.querySelector(".mobile_menu_button");
 let menuListMobile = document.querySelector(".mobile_menu-list");
+
 btnMenuMobile.addEventListener("click", function () {
-    menuListMobile.style.opacity = 1;
+    if (menuListMobile.style.opacity === "1") {
+        menuListMobile.style.opacity = 0;
+    } else {
+        menuListMobile.style.opacity = 1;
+    }
 });
+
+var img = new Image();
+img.src = "./img/img slide 1.png";
+var img = new Image();
+img.src = "./img/img slide 2.jpg";
+var img = new Image();
+img.src = "img/img_slide_3.png";
