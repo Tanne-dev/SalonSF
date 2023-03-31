@@ -76,6 +76,7 @@ itemsServiceElement.forEach(function (item) {
         const containerElement =
             serviceBlockElement.querySelector(".service_container");
         containerElement.style.opacity = "1";
+        containerElement.style.height = "450px";
         itemsContainer.innerHTML = content.innerHTML;
     });
 });
