@@ -20,6 +20,7 @@
     }
     #header_block {
         background: #ffffff5e;
+        justify-content: center;
     }
     #hero_block {
         text-align: center;
@@ -36,12 +37,15 @@
     .hero-cta {
         margin-top: 20px;
     }
+    .slideshow-image {
+        right: auto;
+    }
     .slideshow-image img {
         height: 40vh;
     }
     .slideshow_container {
+        position: relative;
         top: 22em;
-        max-width: calc(100% - 48px);
     }
     .hightlight {
         font-size: 8rem;
@@ -89,6 +93,9 @@
     .service-cta {
         display: none;
     }
+    .service_container {
+        height: 100% !important;
+    }
     .hair-style-thumb {
         height: 250px;
     }
@@ -101,5 +108,12 @@
     /* Populara */
     .head_popular-subtitle a {
         font-size: 2.5rem;
+    }
+    /* galerry */
+    .gallery_list {
+        flex-direction: column;
+    }
+    .galery-item {
+        width: 100%;
     }
 }

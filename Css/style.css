@@ -15,6 +15,7 @@ body{
     --primary-subtittle: #000000;
     --color-hair-item: #bd8686;
     --primary-desc-color: #f6f3f3;
+    --space-bigsize:40px;
     --space-inner: 16px;
     --space-size: 6px;
 }
@@ -51,7 +52,9 @@ body{
 .space-inner {
     height: var(--space-inner);
 }
-
+.space-bigsize{
+    height: var(--space-bigsize);
+}
 .hidden {
     display: none;
 }
@@ -372,9 +375,13 @@ input:focus {
 }
 
 .slideshow_container {
-    position: absolute;
+    position: relative;
+    display: flex;
     width: 100%;
+    justify-content: center;
+  align-items: center;
 }
+
 .slideshow-image {
     position: absolute;
     top: 0%;
@@ -390,6 +397,7 @@ input:focus {
 .slideshow-navigation {
     position: absolute;
     display: flex;
+    justify-content: center;
 }
 .button-slideshow-navigation {
     position: absolute;
@@ -669,6 +677,7 @@ input:focus {
     opacity: 0;
     transition: all 1s ease-in-out;
     background-color: rgba(255, 255, 255, 0.847);
+    overflow: hidden;
 }
 
 .service_detail-info {
@@ -683,6 +692,7 @@ input:focus {
 }
 .service_detail-img {
     flex: 0 0 40%;
+    
 }
 
 .service_detail-img img {
@@ -695,7 +705,13 @@ input:focus {
     top: 55px;
     position: relative;
 }
-
+/* Price block */
+.price_block{
+    margin-bottom: 100px;
+}
+.price-content{
+    flex: 0 0 35%;
+}
 /* ----- Review Block ------*/
 .review_block {
     background-image: url(../img/background\ body.jpg);
@@ -766,10 +782,35 @@ input:focus {
 .review-navigation-right::before {
     content: url(../img/slide\ right.svg);
 }
+/* Gallery block */
+.gallery_block{
+    display: block;
+    position: relative;
+    width: 101%;
+}
+.gallery_list{
+display: flex;
+
+flex-wrap: wrap;
+}
+.galery-item{
+    width: 16.66666667%;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.galery-item img{
+    object-fit: cover;
+  width: 100%;
+  height: 100%;
+    vertical-align: middle;
+}
+
 /* Footer Block */
 #footer {
     padding: 145px 0 127px 0;
 }
+.price_container,
 .footer_body {
     justify-content: space-between;
 }
@@ -780,6 +821,7 @@ input:focus {
     font-weight: 400;
     font-style: italic;
 }
+.price-subtitle,
 .footer_body-subtitle {
     width: 267px;
 }
