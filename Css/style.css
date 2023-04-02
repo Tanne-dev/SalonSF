@@ -216,9 +216,7 @@ input:focus {
 .nav_button-mobile i{
     transition: font-size 1s ease;
 }
-.nav_button-mobile i:hover{
-    font-size: 30px;
-}
+
 #nav_mobile_input{
     display: none;
 }
@@ -263,10 +261,16 @@ input:focus {
     float: right;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: pointer;
+    
 }
 .nav_mobile--close i{
-    font-size: 25px;
+    font-size: 16px;
     color: #818181;
+    transition: font-size 0.1s ease;
+}
+.nav_mobile--close i:hover{
+    font-size: 20px;
 }
 /* nav-overlay */
 .nav_overlay{
@@ -662,7 +666,6 @@ input:focus {
     gap: 25px;
     flex-direction: row;
     margin-top: 40px;
-    
     opacity: 0;
     transition: all 1s ease-in-out;
     background-color: rgba(255, 255, 255, 0.847);
