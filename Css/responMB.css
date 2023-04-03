@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1023px) {
     body {
-        font-family: "Cormorant", sans-serif;
+        font-family: "Cormorant";
     }
     .content {
         overflow-x: scroll;
@@ -24,6 +24,9 @@
     #header_block {
         background: #ffffff5e;
         justify-content: center;
+    }
+    .hero-body {
+        padding-top: 70px;
     }
     #hero_block {
         text-align: center;
@@ -60,7 +63,7 @@
         -webkit-line-clamp: 2;
         line-clamp: 2;
     }
-
+    /* Blog block */
     .blog-item2,
     .blog-item {
         flex-direction: column;
@@ -68,15 +71,25 @@
     .blog-content {
         background-image: none;
     }
+    .blog-content h3 {
+        font-size: 2rem;
+    }
     .blog-item2 .blog-content {
         padding: 0 0 100px 0;
+    }
+    .blog-item2 .desc {
+        font-size: 1.5rem;
     }
     .service_body {
         flex-direction: column;
         margin-top: 0;
+        background-color: #ffffffdf;
     }
     .service_content {
-        padding: none;
+        padding: 10px;
+    }
+    .service_content img {
+        display: none;
     }
     .service_item {
         margin-bottom: none;

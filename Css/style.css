@@ -6,7 +6,7 @@ html {
     font-size: 62.5%;
 }
 body{
-    font-family: "Cormorant", sans-serif;
+    font-family: "Cormorant";
 }
 :root {
     --font-h1: "Rumble Brave Script", serif;
@@ -241,7 +241,7 @@ input:focus {
     max-width: 100%;
     background-color: white;
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     z-index: 100;
     transform:translateX(-100%)
     
