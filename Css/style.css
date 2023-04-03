@@ -379,7 +379,7 @@ input:focus {
     display: flex;
     width: 100%;
     justify-content: center;
-  align-items: center;
+   align-items: center;
 }
 
 .slideshow-image {
