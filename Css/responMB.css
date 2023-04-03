@@ -115,6 +115,13 @@
     .hair-style-thumb {
         height: 250px;
     }
+    /* Price block */
+    .price-content {
+        text-align: center;
+    }
+    .price_container {
+        flex-direction: column;
+    }
     .review_block {
         background-image: none;
     }
@@ -122,6 +129,9 @@
         display: none;
     }
     /* Populara */
+    .head_popular-btn {
+        top: 40%;
+    }
     .head_popular-subtitle a {
         font-size: 2.5rem;
     }
