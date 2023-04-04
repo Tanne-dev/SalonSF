@@ -4,11 +4,11 @@ regBTN.addEventListener("click", function () {
     let regElement = document.querySelector("#sign-up-Page");
     regElement.style.display = "block ";
 });
-let btnExitreg = document.querySelector("#sign-up-Page .btn-exit");
-btnExitreg.addEventListener("click", function () {
-    let regElement = document.querySelector("#sign-up-Page");
-    regElement.style.display = "none";
-});
+// let btnExitreg = document.querySelector("#sign-up-Page .btn-exit");
+// btnExitreg.addEventListener("click", function () {
+//     let regElement = document.querySelector("#sign-up-Page");
+//     regElement.style.display = "none";
+// });
 //
 // Scroll to top website and sticky head off
 let prevScrollPos = window.pageYOffset;

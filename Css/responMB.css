@@ -2,6 +2,9 @@
     body {
         font-family: "Cormorant";
     }
+    .desc {
+        font-size: 1.8rem;
+    }
     .content {
         overflow-x: scroll;
     }

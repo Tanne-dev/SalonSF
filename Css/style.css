@@ -37,7 +37,7 @@ body {
     color: #494949;
     text-align: left;
     line-height: 28px;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 2.2rem;
     transform-origin: 50% 50%;
     opacity: 1;
@@ -248,14 +248,13 @@ body {
 .nav_mobile-list {
     margin-top: 24px;
 }
-.nav_mobile-item {
+.nav_mobile-list .nav-title {
+    padding: 20px 20px;
     display: block;
-    padding: 16px 16px;
-    color: #333;
-    font-size: 2.2rem;
-    border-bottom: solid 1px;
-    z-index: 100;
+    border-bottom: 1px solid #f4e2e2;
+    width: calc(100% - 48px);
 }
+
 .nav_mobile--close {
     float: right;
     padding-left: 20px;
@@ -305,29 +304,6 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 0 20px 20px 20px;
-}
-.nav-item:hover .nav-sub-list {
-    display: block;
-}
-.nav-sub-list {
-    box-shadow: 3px 3px 7px -2px rgba(0, 0, 0, 0.75);
-    position: absolute;
-    width: 120px;
-    top: 30px;
-    z-index: 2;
-    display: none;
-}
-.nav-sub-item {
-    transition: all 0.6s ease;
-}
-.nav-sub-item:hover {
-    background-color: black;
-    color: white;
-}
-.nav-sub-list a {
-    display: block;
-    padding: 10px;
-    color: var(--primary-desc);
 }
 
 .logo_header {
@@ -446,8 +422,7 @@ body {
 }
 
 /* Blog Salon */
-#blog_block {
-}
+
 .blog-item2,
 .blog-item {
     display: flex;
@@ -747,7 +722,7 @@ body {
     display: block;
 }
 .testimonial_text_inner .desc {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: 29px;
     letter-spacing: 0px;
     font-weight: 400;
@@ -864,7 +839,7 @@ body {
 .footer_desc,
 .footer_container-inner .desc {
     color: rgb(113, 113, 113);
-    font-size: 17px;
+    font-size: 1.8rem;
     letter-spacing: 0px;
     line-height: 25px;
     font-weight: 400;
