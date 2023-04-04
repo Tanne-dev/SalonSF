@@ -124,6 +124,8 @@
     }
     .review_block {
         background-image: none;
+        margin-top: 100px;
+        padding: 0;
     }
     .flex_direction-navigation {
         display: none;
@@ -141,5 +143,28 @@
     }
     .galery-item {
         width: 100%;
+    }
+    #footer {
+        height: 90vh;
+        padding: none;
+    }
+    .footer_body .space-inner {
+        display: block;
+    }
+    .footer_body {
+        flex-direction: column;
+        align-items: unset;
+    }
+    .footer_container-inner {
+        margin: auto;
+    }
+    .footer_container {
+        margin: 0;
+    }
+    .arrow-btn {
+        display: ;
+    }
+    .copyright {
+        display: none;
     }
 }

@@ -1,27 +1,3 @@
-// // Change the color of nav-item when u mouseover
-let navItems = document.querySelectorAll(".nav-item");
-navItems.forEach(function (navItem) {
-    let navTitle = navItem.querySelector(".nav-title");
-
-    navItem.addEventListener("mouseover", function () {
-        navTitle.style.color = "#777";
-    });
-    navItem.addEventListener("mouseleave", function () {
-        navTitle.style.color = "#000000";
-    });
-});
-// Show the sub-menu and change the color when mouseover
-for (let i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener("mouseover", function () {
-        let subElement = this.querySelector(".nav-sub-list");
-        subElement.style.display = "block";
-    });
-    navItems[i].addEventListener("mouseleave", function () {
-        let subElement = this.querySelector(".nav-sub-list");
-        subElement.style.display = "none";
-    });
-}
-
 // Turn on and off when clicks on sign up
 let regBTN = document.querySelector(".header_cta");
 regBTN.addEventListener("click", function () {
@@ -107,22 +83,12 @@ function reviewShow() {
 
     setTimeout(reviewShow, 3000);
 }
-// click button mobile
-// click button mobile
-let btnMenuMobile = document.querySelector(".mobile_menu_button");
-let menuListMobile = document.querySelector(".mobile_menu-list");
 
-btnMenuMobile.addEventListener("click", function () {
-    if (menuListMobile.style.opacity === "1") {
-        menuListMobile.style.opacity = 0;
-    } else {
-        menuListMobile.style.opacity = 1;
+// Event scroll mouse down hidden nav-mobile
+let navMobileElement = document.querySelector(".nav_mobile");
+let checkboxElement = document.getElementById("nav_mobile_input");
+window.addEventListener("scroll", function () {
+    if (checkboxElement.checked) {
+        checkboxElement.checked = false;
     }
 });
-
-var img = new Image();
-img.src = "./img/img slide 1.png";
-var img = new Image();
-img.src = "./img/img slide 2.jpg";
-var img = new Image();
-img.src = "img/img_slide_3.png";
