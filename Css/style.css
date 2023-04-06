@@ -8,6 +8,9 @@ html {
 body {
     font-family: "Cormorant";
 }
+a {
+    color: black;
+}
 :root {
     --font-h1: "Rumble Brave Script", serif;
     --Lato-font: "Lato", sans-serif;
@@ -96,81 +99,100 @@ body {
     font-size: 1.6rem;
 }
 /*-----Sign Up Page---- */
+#booking-checkbox {
+    z-index: 200;
+    position: relative;
+}
+#booking-checkbox:checked ~ #sign-up-Page {
+    opacity: 1;
+}
 #sign-up-Page {
-    width: 30%;
-    height: 85vh;
+    width: 70%;
+    height: 90vh;
     position: fixed;
-    background: #fffffff4;
+    background: #ffffff;
     transform: translate(-50%, -50%);
-    top: 56%;
-    right: 20%;
-    display: none;
-    border-radius: 15px;
-    transition: step-end 0.2s ease-in-out;
-    z-index: 2;
+    top: 55%;
+    left: 50%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    z-index: 999;
+}
+.sign-up_container {
+    display: flex;
+    flex-basis: auto;
+    max-width: 98%;
+    height: 87vh;
+    width: 99%;
+    align-items: center;
+    position: relative;
+    left: 1%;
+    top: 2%;
+}
+.sign-up_infor-right {
+    flex: 0 0 40%;
+    position: absolute;
+    /* background-color: rgb(201, 201, 220); */
+    max-height: 100%;
+    width: 35rem;
+    right: 3.2rem;
+}
+.login-container {
+    text-align: center;
 }
 
-.link i {
-    font-size: 20px;
-    border-radius: 10px;
-    padding: 10px;
+.login-image {
+    object-fit: cover;
+    width: 25rem;
+    height: 10rem;
 }
 
-.fa-facebook-f:before {
-    margin-left: 2px;
+.login-title {
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
 }
-.check-name,
-.check-pass {
-    margin: 20px auto;
+.sign-up-desc {
+    font-family: "Lato", sans-serif;
+    font-size: 1.8rem;
+    line-height: 29px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    text-transform: none;
+    color: #8b7f7f;
+}
+.check-info {
+    margin-top: 20px;
     flex-direction: column;
 }
-.check-box {
-    margin-top: 10px;
-    display: flex;
-}
-
-.check-name input,
-.check-pass input {
-    width: 65%;
-    height: 3em;
-    border-radius: 7px;
+.check-info input {
+    width: 70%;
+    height: 3rem;
+    outline: unset;
     border: none;
-    margin-top: 5px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.151);
 }
-.check-name label,
-.check-pass label,
-.check-box label,
-.sign-up-desc {
-    font-size: 1.5rem;
-    color: var(--primary-login-title);
+.login-cta .btn {
+    margin-top: 40px;
+    padding: 0 20px;
 }
-.login-cta {
-    justify-content: space-between;
+.login-cta .btn:hover {
+    background-color: black;
+    color: white !important;
 }
-.btn-sign-up {
-    margin: auto;
-    padding: 20px;
-    width: 50%;
+/* Thumbain sign in */
+.thumb {
+    flex: 0 0 60%;
+    background-color: #818181;
 }
-.btn-sign-up,
-.btn-fix {
-    color: black;
+.thumb img {
+    width: 100%;
+    height: 87vh;
+    object-fit: cover;
+    border-radius: 20px;
 }
-.btn-sign-up a,
-.btn-fix a {
-    color: white;
-    font-size: 1.5rem;
-}
-.btn-exit {
-    position: fixed;
-    left: 100%;
-    width: 30px;
-    height: 30px;
-    background-color: #e2d8c7aa;
-    border-radius: 999px;
-    cursor: pointer;
-}
-
 /*-----Header Block---- */
 .active {
     transform: translateY(-100%);
@@ -257,7 +279,7 @@ body {
 
 .nav_mobile--close {
     float: right;
-    padding-left: 20px;
+    paddoverlaying-left: 20px;
     padding-right: 20px;
     cursor: pointer;
 }
@@ -304,8 +326,11 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 0 20px 20px 20px;
+    transition: all 0.5s ease;
 }
-
+.nav-title:hover {
+    color: #818181;
+}
 .logo_header {
     position: relative;
     left: 5%;
@@ -675,8 +700,7 @@ body {
     position: relative;
 }
 /* Price block */
-.price_block {
-}
+
 .price-content {
     flex: 0 0 35%;
 }

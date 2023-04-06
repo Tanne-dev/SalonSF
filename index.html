@@ -48,6 +48,8 @@
                 
                 <!-- Nav overlay -->
                 <label for="nav_mobile_input" class="nav_overlay"></label>
+
+
                 <nav class="nav_mobile">
                         <div class="space-inner"></div>
                         <label  class="nav_mobile--close" for="nav_mobile_input"><i class="fa-solid fa-x"></i></label>
@@ -65,7 +67,7 @@
                                 >
                             </li>
                             <li >
-                                <a class="nav-title" href="#">Price</a>
+                                <a class="nav-title" href="#price_block">Price</a>
                             </li>
                      </ul>
                  </nav>    
@@ -91,66 +93,63 @@
                     </ul>
                 </nav>
                 <div class="header_cta">
-                    <a class="btn" href="#">Book Now</a>
+                    <label class="btn" for="booking-checkbox">booking now</label>
                 </div>
             </>
         </header>
 
         <!-- ---- Style btn time----- -->
-        <!-- <div id="sign-up-Page">
+        <input type="checkbox" name="" id="booking-checkbox" style="display: none;" ;">
+        <div id="sign-up-Page">
             <div class="btn-exit row">
                 <i class="fa-light fa-x"></i>
             </div>
-            <div class="head_login-page row">
-                <img itemprop="image" src="./img/Logo Login page.png" alt="Logo Salon" />
-                <a href="">
-                    <i
-                        class="fa-solid fa-arrow-right"
-                        style="
-                            position: fixed;
-                            top: 5%;
-                            right: 5%;
-                            font-size: 15px;
-                            color: #0e0d0dc5; ;
-                        "
-                    ></i
-                ></a>
-            </div>
-            <form id="form-login" action="">
-                <div class="body_login-page">
-                    <h2 class="body-login-title" style="margin: auto 24%">
-                        Join Us Today
-                    </h2>
-                    <p class="sign-up-desc" style="margin: 4% 5%">
-                        Become a member by entering your details below.
-                    </p>
-                    <div class="check-name row">
-                        <label for="">Enter your ID</label>
-                        <input type="text" placeholder="Please write here..." />
-                    </div>
-                    <div class="check-pass row">
-                        <label for="">Password</label>
-                        <input
-                            type="password"
-                            placeholder="Please write here..."
-                        />
-                    </div>
-                    <div class="check-pass row">
-                        <label for="">Password Confirmation</label>
-                        <input
-                            type="password"
-                            placeholder="Please write here..."
-                        />
-                    </div>
-
-                    <div class="login-cta row">
-                        <button class="btn btn-sign-up">
-                            <a href="" style="font-size: 15px"> Sign Up</a>
-                        </button>
+            <div class="sign-up_container">
+                <div class="sign-up_infor-right">
+                    <div class="login-container">
+                        <img class="login-image" itemprop="image" src="./img/Logo header.png" alt="Logo Salon" />
+                        
+                        <form  action="">
+                            <div class="login-form-container">
+                                <h2 class="login-title" >
+                                    Join us today
+                                </h2>
+                                <p class="sign-up-desc" >
+                                    Become a member
+                                </p>
+                                <div class="check-info row">
+                                    <p class="sign-up-desc">Name</p>
+                                    <input type="text" placeholder="" />
+                                </div>
+                                <div class="check-info row">
+                                    <p class="sign-up-desc">Email</p>
+                                    <input type="text" placeholder="" />
+                                </div>
+                                <div class="check-info row">
+                                    <p class="sign-up-desc">Telephone</p>
+                                    <input type="number" placeholder="" />
+                                </div>
+                                <div class="check-info row">
+                                    <p class="sign-up-desc">Booking Time</p>
+                                    <input type="datetime-local" placeholder="" />
+                                </div>
+                      
+            
+                                <div class="login-cta row ">
+                                        <a class="btn" href="#" > Boka din tid</a>         
+                                        <a class="btn" href="#" > Boka Direkt</a>
+                                    
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
-        </div> -->
+                <div class="thumb">
+                    <img src="./img/Styling hair.png" alt="">
+                </div>
+                
+            </div>
+        </div>
         <!-- Slideshow Container -->
         <div class="wrapper">
                 <div class="slideshow_container">  
@@ -165,7 +164,7 @@
                         </div>       
                 </div>
             <!-------Hero Block------>
-            <div id="hero_block" class="overlay">
+            <div id="hero_block" >
                 <div class="content">
                     <div class="hero-body ">
                         <div class="hero-main-title  ">
@@ -613,7 +612,7 @@
             </div>
         </div>
         <!-- Price Block -->
-        <div class="price_block">
+        <div id="price_block">
             <div class="content">
                 <div class="price_container row">
                     <div class="price-content">
