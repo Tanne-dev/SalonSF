@@ -90,6 +90,7 @@ a {
     padding-left: 58px;
     padding-right: 58px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 .btn:hover {
     background-color: black;
@@ -99,13 +100,40 @@ body {
     font-size: 1.6rem;
 }
 /*-----Sign Up Page---- */
-#booking-checkbox {
-    z-index: 200;
-    position: relative;
+.btn-close-container {
+    position: absolute;
+    width: 50px;
+    overflow: hidden;
+    right: 0;
 }
-#booking-checkbox:checked ~ #sign-up-Page {
-    opacity: 1;
+.btn-close {
+    background: #d97e45;
+    transition: all 0.5s ease;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    padding: 10px 25px;
+    z-index: 100;
+    cursor: pointer;
 }
+
+.btn-close:hover {
+    color: red;
+    background: rgb(0, 0, 0);
+}
+.sign-up_overlay {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.585);
+    display: none;
+    height: 100vh;
+}
+
 #sign-up-Page {
     width: 70%;
     height: 90vh;
@@ -114,11 +142,13 @@ body {
     transform: translate(-50%, -50%);
     top: 55%;
     left: 50%;
-    opacity: 0;
-    transition: all 1s ease-in-out;
+    display: none;
+
+    transition: all 0.4s ease-in-out;
     z-index: 999;
 }
 .sign-up_container {
+    position: absolute;
     display: flex;
     flex-basis: auto;
     max-width: 98%;
@@ -137,17 +167,17 @@ body {
     width: 35rem;
     right: 3.2rem;
 }
-.login-container {
+.booking-container {
     text-align: center;
 }
 
-.login-image {
+.booking-image {
     object-fit: cover;
     width: 25rem;
     height: 10rem;
 }
 
-.login-title {
+.booking-title {
     font-size: 3rem;
     color: black;
     font-weight: 700;
@@ -174,14 +204,15 @@ body {
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.151);
 }
-.login-cta .btn {
+.booking-cta .btn {
     margin-top: 40px;
     padding: 0 20px;
 }
-.login-cta .btn:hover {
+.booking-cta .btn:hover {
     background-color: black;
     color: white !important;
 }
+
 /* Thumbain sign in */
 .thumb {
     flex: 0 0 60%;
@@ -242,13 +273,12 @@ body {
 #nav_mobile_input {
     display: none;
 }
-#nav_mobile_input:checked ~ .nav_overlay {
-    display: block;
-}
+
 #nav_mobile_input:checked ~ .nav_mobile {
     transform: translateX(0);
     opacity: 1;
 }
+
 .nav_mobile {
     display: block;
     position: fixed;
@@ -292,13 +322,14 @@ body {
     font-size: 20px;
 }
 /* nav-overlay */
+
 .nav_overlay {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.234);
     display: none;
     height: 100vh;
 }
