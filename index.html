@@ -18,7 +18,14 @@
             href="./img/Favicon/favicon-32x32.png"
             type="image/x-icon"
         />
-  
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+                    (function(){ emailjs.init("I8CyT3xhqomo_04o7");
+        })();
+        </script>
+        
         
         <meta
             name="description"
@@ -99,8 +106,8 @@
             
         </header>
 
-        <!-- ---- sign up ----- -->
-        <!-- Nav overlay -->
+        
+        
         
         <!-- Slideshow Container -->
         <div class="wrapper">
@@ -125,24 +132,24 @@
                                         </p>
                                         <div class="check-info row">
                                             <p class="sign-up-desc">Name</p>
-                                            <input type="text" placeholder="" />
+                                            <input type="text" placeholder="" id="myInputName" />
                                         </div>
                                         <div class="check-info row">
                                             <p class="sign-up-desc">Email</p>
-                                            <input type="text" placeholder="" />
+                                            <input type="text" placeholder="" id="myInputEmail" />
                                         </div>
                                         <div class="check-info row">
                                             <p class="sign-up-desc">Telephone</p>
-                                            <input type="number" placeholder="" />
+                                            <input type="number" placeholder="" id="myInputTelefone" />
                                         </div>
                                         <div class="check-info row">
                                             <p class="sign-up-desc">Booking Time</p>
-                                            <input type="datetime-local" placeholder="" />
+                                            <input type="datetime-local" placeholder="" id="myInputime" />
                                         </div>
                             
                     
                                         <div class="booking-cta row ">
-                                                <a class="btn" href="#" > Boka din tid</a>         
+                                                <a class="btn" onclick="sendEmai()" href="#" > Boka din tid</a>         
                                                 <a class="btn" href="#" > Boka Direkt</a>
                                             
                                         </div>
@@ -835,7 +842,6 @@
             <p>Copyright ©2022 webdesign Tanne All rights reserved</p>
         </div>
       
-
         <script src="./Javascript/database.js"></script>
     </body>
 </html>

@@ -106,3 +106,83 @@ btnClose.addEventListener("click", function () {
     overlayElemnt.style.display = "none";
     signuppageElement.style.display = "none";
 });
+let listCustomerAPI = "http://localhost:3000/customers";
+// Get API data
+function start() {
+    getInfo();
+}
+start();
+//  Connect website to API data
+function getInfo(cb) {
+    fetch(listCustomerAPI)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(cb);
+}
+//  Listen event data click and render
+let bookingBTN = document.querySelector(".booking-cta .btn");
+bookingBTN.onclick = function () {
+    let name = document.querySelector("#myInputName").value;
+    let email = document.querySelector("#myInputEmail").value;
+    let telefone = document.querySelector("#myInputTelefone").value;
+    let bookingtime = document.querySelector("#myInputime").value;
+    if (name === "" || email === "" || telefone === "" || bookingtime === "") {
+        alert(" Please do not leave empty information..");
+        return;
+    }
+
+    let dataForm = {
+        name: name,
+        email: email,
+        telefone: telefone,
+        bookingtime: bookingtime,
+    };
+    sendEmail(dataForm, function () {
+        createInfo(dataForm);
+    });
+};
+
+function sendEmail(dataForm, callback) {
+    var params = dataForm;
+    const serviceID = "service_qvtmwwm";
+    const templateID = "template_dasmzyv";
+    emailjs
+        .send(serviceID, templateID, params)
+        .then(function (res) {
+            document.querySelector("#myInputName").value = "";
+            document.querySelector("#myInputEmail").value = "";
+            document.querySelector("#myInputTelefone").value = "";
+            document.querySelector("#myInputime").value = "";
+            console.log(res);
+            alert("Your message sent successfully");
+            if (typeof callback === "function") {
+                callback();
+            }
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
+}
+
+// Sử dụng cú pháp đúng của setTimeout()
+setTimeout(function () {
+    createInfo(dataForm);
+}, 2000);
+
+// Post Data form up to API server
+function createInfo(data, cb) {
+    let option = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify(data),
+    };
+    fetch(listCustomerAPI, option)
+        .then(function (response) {
+            response.json;
+        })
+        .then(cb);
+}
