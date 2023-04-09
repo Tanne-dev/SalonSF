@@ -92,7 +92,7 @@ window.addEventListener("scroll", function () {
         checkboxElement.checked = false;
     }
 });
-// open signup page active overlay
+// Open signup page active overlay
 let signUpElement = document.querySelector(".btn-booking");
 const overlayElemnt = document.querySelector(".sign-up_overlay");
 const signuppageElement = document.getElementById("sign-up-Page");
@@ -100,7 +100,7 @@ signUpElement.addEventListener("click", function () {
     overlayElemnt.style.display = "block";
     signuppageElement.style.display = "block";
 });
-// close booking page
+// Close booking page
 let btnClose = document.querySelector(".btn-close-container");
 btnClose.addEventListener("click", function () {
     overlayElemnt.style.display = "none";
@@ -164,8 +164,6 @@ function sendEmail(dataForm, callback) {
             console.log(err);
         });
 }
-
-// Sử dụng cú pháp đúng của setTimeout()
 setTimeout(function () {
     createInfo(dataForm);
 }, 2000);
