@@ -67,7 +67,7 @@ function slideShow() {
     }
     slideIndex = (slideIndex + 1) % slides.length;
     slides[slideIndex].style.opacity = 1;
-    setTimeout(slideShow, 3000);
+    setTimeout(slideShow, 5000);
 }
 // Slide review
 let slideReviewIndex = 0;
@@ -109,17 +109,17 @@ btnClose.addEventListener("click", function () {
 let listCustomerAPI = "http://localhost:3000/customers";
 // Get API data
 function start() {
-    getInfo();
+    // getInfo();
 }
 start();
 //  Connect website to API data
-function getInfo(cb) {
-    fetch(listCustomerAPI)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(cb);
-}
+// function getInfo(cb) {
+//     fetch(listCustomerAPI)
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(cb);
+// }
 //  Listen event data click and render
 let bookingBTN = document.querySelector(".booking-cta .btn");
 bookingBTN.onclick = function () {
@@ -132,15 +132,19 @@ bookingBTN.onclick = function () {
         return;
     }
 
-    let dataForm = {
+    var dataForm = {
         name: name,
         email: email,
         telefone: telefone,
         bookingtime: bookingtime,
     };
-    sendEmail(dataForm, function () {
-        createInfo(dataForm);
-    });
+    sendEmail(dataForm);
+};
+const dataForm = {
+    name: document.querySelector("#myInputName").value,
+    email: document.querySelector("#myInputEmail").value,
+    phone: document.querySelector("#myInputTelefone").value,
+    message: document.querySelector("#myInputime").value,
 };
 
 function sendEmail(dataForm, callback) {
@@ -164,23 +168,25 @@ function sendEmail(dataForm, callback) {
             console.log(err);
         });
 }
-setTimeout(function () {
-    createInfo(dataForm);
-}, 2000);
 
 // Post Data form up to API server
-function createInfo(data, cb) {
-    let option = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: JSON.stringify(data),
-    };
-    fetch(listCustomerAPI, option)
-        .then(function (response) {
-            response.json;
-        })
-        .then(cb);
-}
+// function createInfo(data, cb) {
+//     let option = {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//             // 'Content-Type': 'application/x-www-form-urlencoded',
+//         },
+//         body: JSON.stringify(data),
+//     };
+//     fetch(listCustomerAPI, option)
+//         .then(function (response) {
+//             response.json;
+//         })
+//         .then(cb);
+// }
+// Scroll window and show element slow
+window.addEventListener("scroll", function () {
+    const currentScrollPos = window.pageXOffset;
+    console.log(currentScrollPos);
+});
