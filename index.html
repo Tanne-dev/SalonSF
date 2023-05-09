@@ -118,11 +118,11 @@
                     </div>
                     
                     <div class="sign-up_container">
-                        <div class="sign-up_infor-right">
+                        <div class="sign-up_infor">
                             <div class="booking-container">
                                 <img class="booking-image" itemprop="image" src="./img/Logo header.png" alt="Logo Salon" />
                                 
-                                <form  action="">
+                                <form action="" method="POST" class="form" id="form-1">
                                     <div class="booking-form-container">
                                         <h2 class="booking-title" >
                                             Join us today
@@ -130,21 +130,30 @@
                                         <p class="sign-up-desc" >
                                             Become a member
                                         </p>
-                                        <div class="check-info row">
-                                            <p class="sign-up-desc">Name</p>
-                                            <input type="text" placeholder="" id="myInputName" />
+                                        <div class="form-group row">
+                                            <label class="sign-up-desc">Full Name</label>
+                                            <input type="text" placeholder="Ex: Sofia Johansson" name="fullname" id="fullname" class="form-control"/>
+                                            <span class="form-message"></span>
+                                        
                                         </div>
-                                        <div class="check-info row">
-                                            <p class="sign-up-desc">Email</p>
-                                            <input type="text" placeholder="" id="myInputEmail" />
+                                        <div class="form-group row">
+                                            <label for="email" class="sign-up-desc">Email</label>
+                                            <input id="email" name="email" type="text" placeholder="Ex: email@domain.com"   class="form-control" />
+                                            <span class="form-message"></span>
+                                     
                                         </div>
-                                        <div class="check-info row">
-                                            <p class="sign-up-desc">Telephone</p>
-                                            <input type="number" placeholder="" id="myInputTelefone" />
+                                        <div class="form-group row">
+                                            <label class="sign-up-desc">Telephone</label>
+                                            <input type="number" placeholder="Ex: 0770888888" id="telefone" class="form-control"/>
+                                            <span class = form-message ></span>
+                                        
                                         </div>
-                                        <div class="check-info row">
-                                            <p class="sign-up-desc">Booking Time</p>
-                                            <input type="datetime-local" placeholder="" id="myInputime" />
+                                        <div class="form-group row">
+                                            <label class="sign-up-desc" for="time">Time</label>
+                                            <input type="datetime-local" id="time" name="time" min="09:00" max="17
+                                            :00" id = 'lokaltime' class="form-control">
+                                            <span class="form-message"></span>
+
                                         </div>
                             
                     
@@ -179,11 +188,11 @@
                 <div class="content">
                     <div class="hero-body ">
                         <div class="hero-main-title  ">
-                            <span class="hightlight" >D</span>iscover Your Perfect Look
+                            <span class="hightlight " >D</span>iscover Your Perfect Look
                         </div>
                         <div class="hero-information ">
                             <div class="hero-title">
-                                <p class="desc line-clamp" >
+                                <label class="desc line-clamp" >
                                     Unleash your style potential and discover your perfect look with our personalized consultation.
                                 </p>
                             </div>
@@ -252,8 +261,8 @@
                         Sunday – 12:00 – 18:00</p>
                     </div>
                 </div>
-                <div class="blog-img">
-                    <img itemprop="image" src="./img/img-item2-blog.jpg" alt="salon" />
+                <div  class="blog-img2">
+                    <img  itemprop="image" src="./img/img-item2-blog.jpg" alt="salon" />
                 </div>
             </div>
         </div>
@@ -841,7 +850,7 @@
         <div class="copyright">
             <p>Copyright ©2022 webdesign Tanne All rights reserved</p>
         </div>
-      
+        <script src="./Javascript/validation.js"></script>
         <script src="./Javascript/database.js"></script>
     </body>
 </html>

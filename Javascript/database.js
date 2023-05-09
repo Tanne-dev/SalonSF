@@ -16,19 +16,38 @@ let headerElement = document.getElementById("header_block");
 
 window.onscroll = function () {
     let topPos = window.pageYOffset;
-    if (prevScrollPos > topPos) {
-        headerElement.classList.add("active");
+    var imgBlogElement = document.querySelector(".blog-img img");
+    var img2BlogElement = document.querySelector(".blog-img2 img");
+    var BlogContent = document.querySelector(".blog-content");
+    var BlogContent2 = document.querySelector(".blog-item2 .blog-content");
+    console.log(topPos);
+    function paralaxScroll() {
+        if (topPos >= 200) {
+            imgBlogElement.style.animation = "slideLeft linear 1.5s";
+            imgBlogElement.style.display = "block";
+            BlogContent.style.animation = " slideRight linear 1.5s";
+        }
+        if (topPos >= 600) {
+            img2BlogElement.style.animation = "slideRight linear 1.5s";
+            img2BlogElement.style.display = "block";
+            BlogContent2.style.animation = " slideLeft linear 1.5s";
+        }
+    }
+    paralaxScroll();
+    if (prevScrollPos < topPos) {
+        headerElement.classList.remove("scroll-hidden");
         headerElement.classList.add("active-filter");
     } else {
-        headerElement.classList.remove("active");
-        headerElement.classList.add("active-filter");
+        headerElement.classList.add("scroll-hidden");
+        headerElement.classList.remove("active-filter");
     }
     prevScrollPos = topPos;
     if (topPos == 0) {
-        headerElement.classList.remove("active");
+        headerElement.classList.remove("scroll-hidden");
         headerElement.classList.remove("active-filter");
     }
 };
+
 // Scroll hair style list
 let btnleft = document.querySelector(".btn-left");
 let btnright = document.querySelector(".btn-right");
@@ -99,6 +118,7 @@ const signuppageElement = document.getElementById("sign-up-Page");
 signUpElement.addEventListener("click", function () {
     overlayElemnt.style.display = "block";
     signuppageElement.style.display = "block";
+    signuppageElement.style.animation = "fadeOut linear 0.5s";
 });
 // Close booking page
 let btnClose = document.querySelector(".btn-close-container");
@@ -123,10 +143,10 @@ start();
 //  Listen event data click and render
 let bookingBTN = document.querySelector(".booking-cta .btn");
 bookingBTN.onclick = function () {
-    let name = document.querySelector("#myInputName").value;
-    let email = document.querySelector("#myInputEmail").value;
-    let telefone = document.querySelector("#myInputTelefone").value;
-    let bookingtime = document.querySelector("#myInputime").value;
+    let name = document.querySelector("#fullname").value;
+    let email = document.querySelector("#email").value;
+    let telefone = document.querySelector("#telefone").value;
+    let bookingtime = document.querySelector("#time").value;
     if (name === "" || email === "" || telefone === "" || bookingtime === "") {
         alert(" Please do not leave empty information..");
         return;
@@ -141,10 +161,10 @@ bookingBTN.onclick = function () {
     sendEmail(dataForm);
 };
 const dataForm = {
-    name: document.querySelector("#myInputName").value,
-    email: document.querySelector("#myInputEmail").value,
-    phone: document.querySelector("#myInputTelefone").value,
-    message: document.querySelector("#myInputime").value,
+    name: document.querySelector("#fullname").value,
+    email: document.querySelector("#email").value,
+    phone: document.querySelector("#telefone").value,
+    message: document.querySelector("#time").value,
 };
 
 function sendEmail(dataForm, callback) {
@@ -154,10 +174,10 @@ function sendEmail(dataForm, callback) {
     emailjs
         .send(serviceID, templateID, params)
         .then(function (res) {
-            document.querySelector("#myInputName").value = "";
-            document.querySelector("#myInputEmail").value = "";
-            document.querySelector("#myInputTelefone").value = "";
-            document.querySelector("#myInputime").value = "";
+            document.querySelector("#fullname").value = "";
+            document.querySelector("#email").value = "";
+            document.querySelector("#telefone").value = "";
+            document.querySelector("#time").value = "";
             console.log(res);
             alert("Your message sent successfully");
             if (typeof callback === "function") {
@@ -186,7 +206,7 @@ function sendEmail(dataForm, callback) {
 //         .then(cb);
 // }
 // Scroll window and show element slow
-window.addEventListener("scroll", function () {
-    const currentScrollPos = window.pageXOffset;
-    console.log(currentScrollPos);
-});
+// window.addEventListener("scroll", function () {
+//     const currentScrollPos = window.pageXOffset;
+//     console.log(currentScrollPos);
+// });
