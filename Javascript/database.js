@@ -13,24 +13,34 @@ regBTN.addEventListener("click", function () {
 // Scroll to top website and sticky head off
 let prevScrollPos = window.pageYOffset;
 let headerElement = document.getElementById("header_block");
+const waypoints = document.querySelectorAll(".waypoint");
+console.log(prevScrollPos);
 
 window.onscroll = function () {
     let topPos = window.pageYOffset;
+    console.log(topPos);
     var imgBlogElement = document.querySelector(".blog-img img");
     var img2BlogElement = document.querySelector(".blog-img2 img");
     var BlogContent = document.querySelector(".blog-content");
     var BlogContent2 = document.querySelector(".blog-item2 .blog-content");
-    console.log(topPos);
+    var serviceHeadTitle = document.querySelector(".service_head");
+
     function paralaxScroll() {
         if (topPos >= 200) {
             imgBlogElement.style.animation = "slideLeft linear 1.5s";
             imgBlogElement.style.display = "block";
-            BlogContent.style.animation = " slideRight linear 1.5s";
+            BlogContent.style.animation = " slideBot linear 1.5s";
         }
         if (topPos >= 600) {
             img2BlogElement.style.animation = "slideRight linear 1.5s";
             img2BlogElement.style.display = "block";
-            BlogContent2.style.animation = " slideLeft linear 1.5s";
+            BlogContent2.style.animation = " slideTop linear 1.5s";
+        }
+        if (topPos >= 1200) {
+            serviceHeadTitle.style.animation = "fadeOut linear 2s";
+        }
+        if (topPos >= 1400) {
+            serviceHeadTitle.style.animation = "fadeOut linear 2s";
         }
     }
     paralaxScroll();

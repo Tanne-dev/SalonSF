@@ -518,6 +518,16 @@ body {
         opacity: 1;
     }
 }
+@keyframes slideBot {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
 .hightlight {
     font-size: 12rem;
 }
