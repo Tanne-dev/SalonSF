@@ -25,10 +25,16 @@ window.onscroll = function () {
     var BlogContent2 = document.querySelector(".blog-item2 .blog-content");
     var serviceHeadTitle = document.querySelector(".service_head");
 
+    var serviceItem1 = document.querySelector("#service_item_ct:first-child");
+
+    var serviceItem2 = document.querySelector("#service_item_ct:nth-child(2)");
+    var serviceItem3 = document.querySelector("#service_item_ct:nth-child(3)");
+    var serviceItem4 = document.querySelector("#service_item_ct:nth-child(4)");
+    var serviceItem5 = document.querySelector("#service_item_ct:last-child");
+
     function paralaxScroll() {
         if (topPos >= 200) {
             imgBlogElement.style.animation = "slideLeft linear 1.5s";
-            imgBlogElement.style.display = "block";
             BlogContent.style.animation = " slideBot linear 1.5s";
         }
         if (topPos >= 600) {
@@ -36,11 +42,23 @@ window.onscroll = function () {
             img2BlogElement.style.display = "block";
             BlogContent2.style.animation = " slideTop linear 1.5s";
         }
-        if (topPos >= 1200) {
+        if (topPos >= 900) {
             serviceHeadTitle.style.animation = "fadeOut linear 2s";
         }
-        if (topPos >= 1400) {
-            serviceHeadTitle.style.animation = "fadeOut linear 2s";
+        if (topPos >= 1100) {
+            serviceItem1.style.animation = "slideLeft linear 1.5s";
+        }
+        if (topPos >= 1600) {
+            serviceItem2.style.animation = "slideRight linear 1.5s";
+        }
+        if (topPos >= 2100) {
+            serviceItem3.style.animation = "slideLeft linear 1.5s";
+        }
+        if (topPos >= 2600) {
+            serviceItem4.style.animation = "slideRight linear 1.5s";
+        }
+        if (topPos >= 3100) {
+            serviceItem5.style.animation = "slideLeft linear 1.5s";
         }
     }
     paralaxScroll();
@@ -70,21 +88,21 @@ btnleft.addEventListener("click", function (e) {
 });
 
 // Show an post when click on element
-const itemsServiceElement = document.querySelectorAll(".service_item");
-const itemsContainer = document.querySelector(".service_container");
+// const itemsServiceElement = document.querySelectorAll(".service_item");
+// const itemsContainer = document.querySelector(".service_container");
 
-itemsServiceElement.forEach(function (item) {
-    item.addEventListener("click", function () {
-        const contentId = item.getAttribute("data-content");
-        let serviceBlockElement = document.getElementById("service_block");
-        const content = document.getElementById(contentId);
-        const containerElement =
-            serviceBlockElement.querySelector(".service_container");
-        containerElement.style.opacity = "1";
-        containerElement.style.height = "450px";
-        itemsContainer.innerHTML = content.innerHTML;
-    });
-});
+// // itemsServiceElement.forEach(function (item) {
+// //     item.addEventListener("click", function () {
+// //         const contentId = item.getAttribute("data-content");
+// //         let serviceBlockElement = document.getElementById("service_block");
+// //         const content = document.getElementById(contentId);
+// //         const containerElement =
+// //             serviceBlockElement.querySelector(".service_container");
+// //         containerElement.style.opacity = "1";
+// //         containerElement.style.height = "450px";
+// //         itemsContainer.innerHTML = content.innerHTML;
+// //     });
+// // });
 //Slide Image
 slideIndex = 0;
 slideShow();
