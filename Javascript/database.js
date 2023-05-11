@@ -35,6 +35,7 @@ window.onscroll = function () {
     function paralaxScroll() {
         if (topPos >= 200) {
             imgBlogElement.style.animation = "slideLeft linear 1.5s";
+            imgBlogElement.style.display = "block";
             BlogContent.style.animation = " slideBot linear 1.5s";
         }
         if (topPos >= 600) {
@@ -59,6 +60,19 @@ window.onscroll = function () {
         }
         if (topPos >= 3100) {
             serviceItem5.style.animation = "slideLeft linear 1.5s";
+        } else {
+            imgBlogElement.style.removeProperty("animation");
+            img2BlogElement.style.removeProperty("animation");
+            BlogContent.style.removeProperty("animation");
+            img2BlogElement.style.removeProperty("animation");
+            img2BlogElement.style.removeProperty("animation");
+            BlogContent2.style.removeProperty("animation");
+            serviceHeadTitle.style.removeProperty("animation");
+            serviceItem1.style.removeProperty("animation");
+            serviceItem2.style.removeProperty("animation");
+            serviceItem3.style.removeProperty("animation");
+            serviceItem4.style.removeProperty("animation");
+            serviceItem5.style.removeProperty("animation");
         }
     }
     paralaxScroll();
