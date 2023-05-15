@@ -4,65 +4,26 @@ regBTN.addEventListener("click", function () {
     let regElement = document.querySelector("#sign-up-Page");
     regElement.style.display = "block ";
 });
-// let btnExitreg = document.querySelector("#sign-up-Page .btn-exit");
-// btnExitreg.addEventListener("click", function () {
-//     let regElement = document.querySelector("#sign-up-Page");
-//     regElement.style.display = "none";
-// });
-//
-// Scroll to top website and sticky head off
+// SlideElement when people scroll
+let items = document.querySelectorAll(".group-slide .item-slide");
+window.addEventListener("scroll", checkBox);
+checkBox();
+
+function checkBox() {
+    const triggerBottom = (window.innerHeight / 5) * 4;
+    items.forEach(function (item) {
+        const itemTop = item.getBoundingClientRect().top;
+        if (itemTop < triggerBottom) {
+            item.classList.add("show");
+        }
+    });
+}
 let prevScrollPos = window.pageYOffset;
 let headerElement = document.getElementById("header_block");
-const waypoints = document.querySelectorAll(".waypoint");
-console.log(prevScrollPos);
 
 window.onscroll = function () {
     let topPos = window.pageYOffset;
-    console.log(topPos);
-    var imgBlogElement = document.querySelector(".blog-img img");
-    var img2BlogElement = document.querySelector(".blog-img2 img");
-    var BlogContent = document.querySelector(".blog-content");
-    var BlogContent2 = document.querySelector(".blog-item2 .blog-content");
-    var serviceHeadTitle = document.querySelector(".service_head");
 
-    var serviceItem1 = document.querySelector("#service_item_ct:first-child");
-
-    var serviceItem2 = document.querySelector("#service_item_ct:nth-child(2)");
-    var serviceItem3 = document.querySelector("#service_item_ct:nth-child(3)");
-    var serviceItem4 = document.querySelector("#service_item_ct:nth-child(4)");
-    var serviceItem5 = document.querySelector("#service_item_ct:last-child");
-
-    function paralaxScroll() {
-        if (topPos >= 200) {
-            imgBlogElement.style.animation = "slideLeft linear 1.5s";
-            imgBlogElement.style.display = "block";
-            BlogContent.style.animation = " slideBot linear 1.5s";
-        }
-        if (topPos >= 600) {
-            img2BlogElement.style.animation = "slideRight linear 1.5s";
-            img2BlogElement.style.display = "block";
-            BlogContent2.style.animation = " slideTop linear 1.5s";
-        }
-        if (topPos >= 900) {
-            serviceHeadTitle.style.animation = "fadeOut linear 2s";
-        }
-        if (topPos >= 1100) {
-            serviceItem1.style.animation = "slideLeft linear 1.5s";
-        }
-        if (topPos >= 1600) {
-            serviceItem2.style.animation = "slideRight linear 1.5s";
-        }
-        if (topPos >= 2100) {
-            serviceItem3.style.animation = "slideLeft linear 1.5s";
-        }
-        if (topPos >= 2600) {
-            serviceItem4.style.animation = "slideRight linear 1.5s";
-        }
-        if (topPos >= 3100) {
-            serviceItem5.style.animation = "slideLeft linear 1.5s";
-        }
-    }
-    paralaxScroll();
     if (prevScrollPos < topPos) {
         headerElement.classList.remove("scroll-hidden");
         headerElement.classList.add("active-filter");
@@ -88,23 +49,6 @@ btnleft.addEventListener("click", function (e) {
     hairListElement.scrollLeft -= 1300;
 });
 
-// Show an post when click on element
-// const itemsServiceElement = document.querySelectorAll(".service_item");
-// const itemsContainer = document.querySelector(".service_container");
-
-// // itemsServiceElement.forEach(function (item) {
-// //     item.addEventListener("click", function () {
-// //         const contentId = item.getAttribute("data-content");
-// //         let serviceBlockElement = document.getElementById("service_block");
-// //         const content = document.getElementById(contentId);
-// //         const containerElement =
-// //             serviceBlockElement.querySelector(".service_container");
-// //         containerElement.style.opacity = "1";
-// //         containerElement.style.height = "450px";
-// //         itemsContainer.innerHTML = content.innerHTML;
-// //     });
-// // });
-//Slide Image
 slideIndex = 0;
 slideShow();
 function slideShow() {
@@ -155,21 +99,7 @@ btnClose.addEventListener("click", function () {
     overlayElemnt.style.display = "none";
     signuppageElement.style.display = "none";
 });
-let listCustomerAPI = "http://localhost:3000/customers";
-// Get API data
-function start() {
-    // getInfo();
-}
-start();
-//  Connect website to API data
-// function getInfo(cb) {
-//     fetch(listCustomerAPI)
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(cb);
-// }
-//  Listen event data click and render
+
 let bookingBTN = document.querySelector(".booking-cta .btn");
 bookingBTN.onclick = function () {
     let name = document.querySelector("#fullname").value;
@@ -217,25 +147,3 @@ function sendEmail(dataForm, callback) {
             console.log(err);
         });
 }
-
-// Post Data form up to API server
-// function createInfo(data, cb) {
-//     let option = {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//             // 'Content-Type': 'application/x-www-form-urlencoded',
-//         },
-//         body: JSON.stringify(data),
-//     };
-//     fetch(listCustomerAPI, option)
-//         .then(function (response) {
-//             response.json;
-//         })
-//         .then(cb);
-// }
-// Scroll window and show element slow
-// window.addEventListener("scroll", function () {
-//     const currentScrollPos = window.pageXOffset;
-//     console.log(currentScrollPos);
-// });
