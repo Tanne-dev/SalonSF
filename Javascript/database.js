@@ -15,6 +15,8 @@ function checkBox() {
         const itemTop = item.getBoundingClientRect().top;
         if (itemTop < triggerBottom) {
             item.classList.add("show");
+        } else {
+            item.classList.remove("show");
         }
     });
 }
